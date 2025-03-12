@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/03/10 08:55:29.000.538,=C:\Users\infortread\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/03/10 09:07:58.000.191,C:\Users\infortread\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Projects\ComprasEstoque2\unitPrincipal.dfm</Transaction>
+    <Transaction>2025/03/10 09:07:58.000.191,C:\Users\infortread\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Projects\ComprasEstoque2\unitPrincipal.pas</Transaction>
+    <Transaction>2025/03/10 09:08:11.000.098,C:\Users\infortread\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Projects\ComprasEstoque2\ComprasEstoque.dproj</Transaction>
+    <Transaction>2025/03/11 09:57:39.000.916,=C:\Projects\ComprasEstoque2\Unit2.pas</Transaction>
+    <Transaction>2025/03/11 10:00:44.000.112,C:\Projects\ComprasEstoque2\Unit2.dfm=C:\Projects\ComprasEstoque2\cadFornecedor.dfm</Transaction>
+    <Transaction>2025/03/11 10:00:44.000.112,C:\Projects\ComprasEstoque2\Unit2.pas=C:\Projects\ComprasEstoque2\cadFornecedor.pas</Transaction>
+    <Transaction>2025/03/11 10:33:13.000.479,=C:\Projects\ComprasEstoque2\Unit2.pas</Transaction>
+    <Transaction>2025/03/11 10:34:29.000.479,C:\Projects\ComprasEstoque2\unitPagInicial.pas=C:\Projects\ComprasEstoque2\Unit2.pas</Transaction>
+    <Transaction>2025/03/11 10:34:29.000.479,C:\Projects\ComprasEstoque2\unitPagInicial.dfm=C:\Projects\ComprasEstoque2\Unit2.dfm</Transaction>
+    <Transaction>2025/03/11 13:39:50.000.599,=C:\Projects\ComprasEstoque2\Unit1.pas</Transaction>
+    <Transaction>2025/03/11 13:44:56.000.634,C:\Projects\ComprasEstoque2\Unit1.dfm=C:\Projects\ComprasEstoque2\unitDM.dfm</Transaction>
+    <Transaction>2025/03/11 13:44:56.000.634,C:\Projects\ComprasEstoque2\Unit1.pas=C:\Projects\ComprasEstoque2\unitDM.pas</Transaction>
+    <Transaction>2025/03/12 11:40:44.319,=C:\Projects\ComprasEstoque2\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>

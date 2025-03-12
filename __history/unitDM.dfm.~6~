@@ -1,0 +1,128 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 532
+  Width = 917
+  object conexao: TFDConnection
+    Params.Strings = (
+      'Database=comprasestoque'
+      'User_Name=root'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 56
+    Top = 40
+  end
+  object tbFornecedor: TFDTable
+    Active = True
+    IndexFieldNames = 'idfornecedor'
+    DetailFields = 
+      'agencia;cep;cnpjcpf;email;endereco;fk_cidadeID;fk_cod_banco;idfo' +
+      'rnecedor;inscestadual;inscmunicipal;nomecontato;nomefantasia;num' +
+      'conta;razaosocial;site;telcontato'
+    Connection = conexao
+    TableName = 'comprasestoque.fornecedor'
+    Left = 144
+    Top = 40
+    object tbFornecedoridfornecedor: TFDAutoIncField
+      FieldName = 'idfornecedor'
+      Origin = 'idfornecedor'
+    end
+    object tbFornecedornomefantasia: TStringField
+      FieldName = 'nomefantasia'
+      Origin = 'nomefantasia'
+      Required = True
+      Size = 100
+    end
+    object tbFornecedorrazaosocial: TStringField
+      FieldName = 'razaosocial'
+      Origin = 'razaosocial'
+      Required = True
+      Size = 100
+    end
+    object tbFornecedorcnpjcpf: TStringField
+      FieldName = 'cnpjcpf'
+      Origin = 'cnpjcpf'
+      Required = True
+      EditMask = '###.###.###-##;1;_'
+      Size = 18
+    end
+    object tbFornecedorinscestadual: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'inscestadual'
+      Origin = 'inscestadual'
+      EditMask = '###.###.###;1;_'
+      Size = 50
+    end
+    object tbFornecedorinscmunicipal: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'inscmunicipal'
+      Origin = 'inscmunicipal'
+      Size = 50
+    end
+    object tbFornecedorendereco: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'endereco'
+      Origin = 'endereco'
+      Size = 120
+    end
+    object tbFornecedorfk_cidadeID: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'fk_cidadeID'
+      Origin = 'fk_cidadeID'
+    end
+    object tbFornecedorcep: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'cep'
+      Origin = 'cep'
+      EditMask = '#####-###;1;_'
+      Size = 10
+    end
+    object tbFornecedornomecontato: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'nomecontato'
+      Origin = 'nomecontato'
+      Size = 50
+    end
+    object tbFornecedortelcontato: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'telcontato'
+      Origin = 'telcontato'
+      EditMask = '(##) #####-####;1;_'
+      Size = 50
+    end
+    object tbFornecedoremail: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'email'
+      Origin = 'email'
+      Size = 50
+    end
+    object tbFornecedorsite: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'site'
+      Origin = 'site'
+      Size = 100
+    end
+    object tbFornecedorfk_cod_banco: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'fk_cod_banco'
+      Origin = 'fk_cod_banco'
+    end
+    object tbFornecedoragencia: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'agencia'
+      Origin = 'agencia'
+      Size = 10
+    end
+    object tbFornecedornumconta: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'numconta'
+      Origin = 'numconta'
+      Size = 50
+    end
+  end
+  object DSfornecedor: TDataSource
+    DataSet = tbFornecedor
+    Left = 144
+    Top = 120
+  end
+end
