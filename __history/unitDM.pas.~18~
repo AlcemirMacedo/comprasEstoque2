@@ -1,0 +1,51 @@
+unit unitDM;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MySQL,
+  FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
+  FireDAC.Comp.DataSet;
+
+type
+  TDataModule1 = class(TDataModule)
+    conexao: TFDConnection;
+    DSfornecedor: TDataSource;
+    FDTable1: TFDTable;
+    FDTable1idfornecedor: TFDAutoIncField;
+    FDTable1nomefantasia: TStringField;
+    FDTable1razaosocial: TStringField;
+    FDTable1cnpjcpf: TStringField;
+    FDTable1inscestadual: TStringField;
+    FDTable1inscmunicipal: TStringField;
+    FDTable1logradouro: TStringField;
+    FDTable1endereco: TStringField;
+    FDTable1bairro: TStringField;
+    FDTable1uf: TStringField;
+    FDTable1cep: TStringField;
+    FDTable1nomecontato: TStringField;
+    FDTable1telcontato: TStringField;
+    FDTable1email: TStringField;
+    FDTable1site: TStringField;
+    FDTable1fk_cod_banco: TIntegerField;
+    FDTable1agencia: TStringField;
+    FDTable1numconta: TStringField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DataModule1: TDataModule1;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

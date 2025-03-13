@@ -1,7 +1,7 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
-  Height = 532
-  Width = 917
+  Height = 385
+  Width = 589
   object conexao: TFDConnection
     Params.Strings = (
       'Database=comprasestoque'
@@ -9,174 +9,186 @@ object DataModule1: TDataModule1
       'DriverID=MySQL')
     Connected = True
     LoginPrompt = False
-    Left = 56
-    Top = 40
+    Left = 96
+    Top = 96
   end
-  object tbFornecedor: TFDTable
+  object DSfornecedor: TDataSource
+    AutoEdit = False
+    DataSet = tbfornecedor
+    Left = 184
+    Top = 152
+  end
+  object tbfornecedor: TFDTable
     Active = True
     IndexFieldNames = 'idfornecedor'
-    DetailFields = 
-      'agencia;cep;cnpjcpf;email;endereco;fk_cidadeID;fk_cod_banco;idfo' +
-      'rnecedor;inscestadual;inscmunicipal;nomecontato;nomefantasia;num' +
-      'conta;razaosocial;site;telcontato'
     Connection = conexao
     TableName = 'comprasestoque.fornecedor'
-    Left = 144
-    Top = 40
-    object tbFornecedoridfornecedor: TFDAutoIncField
+    Left = 184
+    Top = 96
+    object tbfornecedoridfornecedor: TFDAutoIncField
       FieldName = 'idfornecedor'
       Origin = 'idfornecedor'
       ProviderFlags = [pfInWhere, pfInKey]
       ReadOnly = True
     end
-    object tbFornecedornomefantasia: TStringField
+    object tbfornecedornomefantasia: TStringField
       FieldName = 'nomefantasia'
       Origin = 'nomefantasia'
       Required = True
       Size = 100
     end
-    object tbFornecedorrazaosocial: TStringField
+    object tbfornecedorrazaosocial: TStringField
       FieldName = 'razaosocial'
       Origin = 'razaosocial'
       Required = True
       Size = 100
     end
-    object tbFornecedorcnpjcpf: TStringField
+    object tbfornecedorcnpjcpf: TStringField
       FieldName = 'cnpjcpf'
       Origin = 'cnpjcpf'
       Required = True
       Size = 18
     end
-    object tbFornecedorinscestadual: TStringField
+    object tbfornecedorinscestadual: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'inscestadual'
       Origin = 'inscestadual'
       Size = 50
     end
-    object tbFornecedorinscmunicipal: TStringField
+    object tbfornecedorinscmunicipal: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'inscmunicipal'
       Origin = 'inscmunicipal'
       Size = 50
     end
-    object tbFornecedorendereco: TStringField
+    object tbfornecedorlogradouro: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'logradouro'
+      Origin = 'logradouro'
+      Size = 11
+    end
+    object tbfornecedorendereco: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'endereco'
       Origin = 'endereco'
       Size = 120
     end
-    object tbFornecedorbairro: TStringField
+    object tbfornecedorbairro: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'bairro'
       Origin = 'bairro'
       Size = 120
     end
-    object tbFornecedoruf: TStringField
+    object tbfornecedorcidade: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'cidade'
+      Origin = 'cidade'
+      Size = 120
+    end
+    object tbfornecedoruf: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'uf'
       Origin = 'uf'
       Size = 2
     end
-    object tbFornecedorfk_cidadeID: TIntegerField
-      AutoGenerateValue = arDefault
-      FieldName = 'fk_cidadeID'
-      Origin = 'fk_cidadeID'
-    end
-    object tbFornecedorcep: TStringField
+    object tbfornecedorcep: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'cep'
       Origin = 'cep'
+      EditMask = '#####-###;1;_'
       Size = 10
     end
-    object tbFornecedornomecontato: TStringField
+    object tbfornecedornomecontato: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'nomecontato'
       Origin = 'nomecontato'
       Size = 50
     end
-    object tbFornecedortelcontato: TStringField
+    object tbfornecedortelcontato: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'telcontato'
       Origin = 'telcontato'
       Size = 50
     end
-    object tbFornecedoremail: TStringField
+    object tbfornecedoremail: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'email'
       Origin = 'email'
       Size = 50
     end
-    object tbFornecedorsite: TStringField
+    object tbfornecedorsite: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'site'
       Origin = 'site'
       Size = 100
     end
-    object tbFornecedorfk_cod_banco: TIntegerField
+    object tbfornecedorfk_cod_banco: TIntegerField
       AutoGenerateValue = arDefault
       FieldName = 'fk_cod_banco'
       Origin = 'fk_cod_banco'
     end
-    object tbFornecedoragencia: TStringField
+    object tbfornecedoragencia: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'agencia'
       Origin = 'agencia'
       Size = 10
     end
-    object tbFornecedornumconta: TStringField
+    object tbfornecedornumconta: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'numconta'
       Origin = 'numconta'
       Size = 50
     end
   end
-  object DSfornecedor: TDataSource
-    DataSet = tbFornecedor
-    Left = 144
-    Top = 120
-  end
-  object tbcidade: TFDTable
+  object tbproduto: TFDTable
     Active = True
-    IndexFieldNames = 'cidadeID;descricao;uf'
+    IndexFieldNames = 'idproduto'
     Connection = conexao
-    TableName = 'cidade'
-    Left = 240
-    Top = 40
-    object tbcidadecidadeID: TFDAutoIncField
-      FieldName = 'cidadeID'
-      Origin = 'cidadeID'
-      ReadOnly = True
+    TableName = 'comprasestoque.produto'
+    Left = 272
+    Top = 96
+    object tbprodutoidproduto: TFDAutoIncField
+      FieldName = 'idproduto'
+      Origin = 'idproduto'
     end
-    object tbcidadedescricao: TStringField
+    object tbprodutonome: TStringField
+      FieldName = 'nome'
+      Origin = 'nome'
+      Required = True
+      Size = 50
+    end
+    object tbprodutodescricao: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'descricao'
       Origin = 'descricao'
-      Size = 50
+      Size = 255
     end
-    object tbcidadeuf: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'uf'
-      Origin = 'uf'
+    object tbprodutopreco: TBCDField
+      FieldName = 'preco'
+      Origin = 'preco'
+      Required = True
+      Precision = 10
       Size = 2
     end
+    object tbprodutoqtd_estoque: TIntegerField
+      FieldName = 'qtd_estoque'
+      Origin = 'qtd_estoque'
+      Required = True
+    end
+    object tbprodutoidcategoria_fk: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'idcategoria_fk'
+      Origin = 'idcategoria_fk'
+    end
+    object tbprodutodata_cadastro: TDateTimeField
+      AutoGenerateValue = arDefault
+      FieldName = 'data_cadastro'
+      Origin = 'data_cadastro'
+    end
   end
-  object DScidade: TDataSource
-    DataSet = tbcidade
-    Left = 240
-    Top = 120
-  end
-  object tbuf: TFDTable
-    Active = True
-    IndexFieldNames = 'iduf'
-    DetailFields = 'descuf;iduf'
-    Connection = conexao
-    TableName = 'comprasestoque.uf'
-    Left = 320
-    Top = 40
-  end
-  object DSuf: TDataSource
-    DataSet = tbuf
-    Left = 320
-    Top = 120
+  object DSproduto: TDataSource
+    DataSet = tbproduto
+    Left = 272
+    Top = 152
   end
 end

@@ -13,33 +13,36 @@ uses
 type
   TDataModule1 = class(TDataModule)
     conexao: TFDConnection;
-    tbFornecedor: TFDTable;
     DSfornecedor: TDataSource;
-    tbFornecedoridfornecedor: TFDAutoIncField;
-    tbFornecedornomefantasia: TStringField;
-    tbFornecedorrazaosocial: TStringField;
-    tbFornecedorcnpjcpf: TStringField;
-    tbFornecedorinscestadual: TStringField;
-    tbFornecedorinscmunicipal: TStringField;
-    tbFornecedorendereco: TStringField;
-    tbFornecedorbairro: TStringField;
-    tbFornecedoruf: TStringField;
-    tbFornecedorfk_cidadeID: TIntegerField;
-    tbFornecedorcep: TStringField;
-    tbFornecedornomecontato: TStringField;
-    tbFornecedortelcontato: TStringField;
-    tbFornecedoremail: TStringField;
-    tbFornecedorsite: TStringField;
-    tbFornecedorfk_cod_banco: TIntegerField;
-    tbFornecedoragencia: TStringField;
-    tbFornecedornumconta: TStringField;
-    tbcidade: TFDTable;
-    DScidade: TDataSource;
-    tbcidadecidadeID: TFDAutoIncField;
-    tbcidadedescricao: TStringField;
-    tbcidadeuf: TStringField;
-    tbuf: TFDTable;
-    DSuf: TDataSource;
+    tbfornecedor: TFDTable;
+    tbfornecedoridfornecedor: TFDAutoIncField;
+    tbfornecedornomefantasia: TStringField;
+    tbfornecedorrazaosocial: TStringField;
+    tbfornecedorcnpjcpf: TStringField;
+    tbfornecedorinscestadual: TStringField;
+    tbfornecedorinscmunicipal: TStringField;
+    tbfornecedorlogradouro: TStringField;
+    tbfornecedorendereco: TStringField;
+    tbfornecedorbairro: TStringField;
+    tbfornecedorcidade: TStringField;
+    tbfornecedoruf: TStringField;
+    tbfornecedorcep: TStringField;
+    tbfornecedornomecontato: TStringField;
+    tbfornecedortelcontato: TStringField;
+    tbfornecedoremail: TStringField;
+    tbfornecedorsite: TStringField;
+    tbfornecedorfk_cod_banco: TIntegerField;
+    tbfornecedoragencia: TStringField;
+    tbfornecedornumconta: TStringField;
+    tbproduto: TFDTable;
+    DSproduto: TDataSource;
+    tbprodutoidproduto: TFDAutoIncField;
+    tbprodutonome: TStringField;
+    tbprodutodescricao: TStringField;
+    tbprodutopreco: TBCDField;
+    tbprodutoqtd_estoque: TIntegerField;
+    tbprodutoidcategoria_fk: TIntegerField;
+    tbprodutodata_cadastro: TDateTimeField;
   private
     { Private declarations }
   public

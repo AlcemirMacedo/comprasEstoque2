@@ -24,7 +24,6 @@ type
     Label6: TLabel;
     DBEdit6: TDBEdit;
     Label1: TLabel;
-    DBEdit7: TDBEdit;
     Label7: TLabel;
     Label8: TLabel;
     Panel1: TPanel;
@@ -41,8 +40,19 @@ type
     SpeedButton5: TSpeedButton;
     SpeedButton6: TSpeedButton;
     Label9: TLabel;
-    DBLookupComboBox1: TDBLookupComboBox;
-    DBLookupComboBox2: TDBLookupComboBox;
+    DBEdit7: TDBEdit;
+    Label10: TLabel;
+    DBEdit8: TDBEdit;
+    DBEdit9: TDBEdit;
+    DBEdit10: TDBEdit;
+    DBEdit11: TDBEdit;
+    Label11: TLabel;
+    DBEdit12: TDBEdit;
+    Label12: TLabel;
+    Label13: TLabel;
+    DBEdit13: TDBEdit;
+    Label14: TLabel;
+    DBEdit14: TDBEdit;
     procedure Panel1Click(Sender: TObject);
     procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
@@ -82,7 +92,5 @@ procedure Tfornecedor.Panel1Click(Sender: TObject);
 begin
 self.close;
 end;
-
-
 
 end.
