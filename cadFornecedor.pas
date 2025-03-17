@@ -11,51 +11,71 @@ uses
 type
   Tfornecedor = class(TForm)
     painelFornecedor: TPanel;
-    DBGrid1: TDBGrid;
-    DBEdit1: TDBEdit;
+    fantasiaF: TDBEdit;
     Label2: TLabel;
-    DBEdit2: TDBEdit;
+    dpfcnpjF: TDBEdit;
     Label3: TLabel;
-    DBEdit3: TDBEdit;
+    razaoF: TDBEdit;
     Label4: TLabel;
     Label5: TLabel;
-    DBEdit4: TDBEdit;
-    DBEdit5: TDBEdit;
+    ieF: TDBEdit;
+    imF: TDBEdit;
     Label6: TLabel;
-    DBEdit6: TDBEdit;
     Label1: TLabel;
     Label7: TLabel;
     Label8: TLabel;
     Panel1: TPanel;
+    Label9: TLabel;
+    bairroF: TDBEdit;
+    Label10: TLabel;
+    cepF: TDBEdit;
+    ufF: TDBEdit;
+    cidadeF: TDBEdit;
+    emailF: TDBEdit;
+    Label11: TLabel;
+    teleF: TDBEdit;
+    Label12: TLabel;
+    Label13: TLabel;
+    nomerespF: TDBEdit;
+    Label14: TLabel;
+    siteF: TDBEdit;
+    Panel5: TPanel;
+    Image4: TImage;
+    SpeedButton7: TSpeedButton;
+    SpeedButton8: TSpeedButton;
     Panel4: TPanel;
     Image1: TImage;
     SpeedButton1: TSpeedButton;
+    SpeedButton6: TSpeedButton;
     Panel2: TPanel;
     Image2: TImage;
     SpeedButton2: TSpeedButton;
+    SpeedButton4: TSpeedButton;
     Panel3: TPanel;
     Image3: TImage;
     SpeedButton3: TSpeedButton;
-    SpeedButton4: TSpeedButton;
     SpeedButton5: TSpeedButton;
-    SpeedButton6: TSpeedButton;
-    Label9: TLabel;
-    DBEdit7: TDBEdit;
-    Label10: TLabel;
-    DBEdit8: TDBEdit;
-    DBEdit9: TDBEdit;
-    DBEdit10: TDBEdit;
-    DBEdit11: TDBEdit;
-    Label11: TLabel;
-    DBEdit12: TDBEdit;
-    Label12: TLabel;
-    Label13: TLabel;
-    DBEdit13: TDBEdit;
-    Label14: TLabel;
-    DBEdit14: TDBEdit;
+    DBComboBox1: TDBComboBox;
+    DBEdit1: TDBEdit;
+    Label15: TLabel;
+    Label17: TLabel;
+    GroupBox1: TGroupBox;
+    Label16: TLabel;
+    Label18: TLabel;
+    DBLookupComboBox1: TDBLookupComboBox;
+    Label19: TLabel;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    Label20: TLabel;
+    Panel6: TPanel;
+    DBGrid1: TDBGrid;
     procedure Panel1Click(Sender: TObject);
     procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
+    procedure SpeedButton5Click(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
+    procedure SpeedButton6Click(Sender: TObject);
+    procedure SpeedButton8Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -91,6 +111,62 @@ end;
 procedure Tfornecedor.Panel1Click(Sender: TObject);
 begin
 self.close;
+end;
+
+procedure Tfornecedor.SpeedButton4Click(Sender: TObject);
+begin
+
+  try
+    if DataModule1.tbfornecedor.State in [dsEdit, dsInsert] then
+    begin
+      DataModule1.tbfornecedor.Post; // Salva as alterações
+      ShowMessage('Alterações salvas com sucesso!');
+    end
+    else
+      ShowMessage('Nenhum registro está em modo de edição ou inserção.');
+  except
+    on E: Exception do
+    begin
+      ShowMessage('Erro ao salvar alterações: ' + E.Message);
+      DataModule1.tbfornecedor.Cancel; // Cancela as alterações caso ocorra erro
+    end;
+  end;
+end;
+
+procedure Tfornecedor.SpeedButton5Click(Sender: TObject);
+begin
+
+//Prepara o dataset para um novo registro
+DataModule1.tbfornecedor.Append;
+
+fantasiaF.SetFocus;
+end;
+
+procedure Tfornecedor.SpeedButton6Click(Sender: TObject);
+begin
+  if not DataModule1.tbfornecedor.IsEmpty then // Verifica se tem alguém selecionado
+  // pergunta ao usuário se ele deseja excluir o registro
+  if MessageDlg('Tem certeza que deseja excluir esse fornecedor?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  begin    
+    try
+      DataModule1.tbfornecedor.Delete; // Remove o registro atual
+      ShowMessage('Registro excluído com sucesso!');
+    except
+      on E: Exception do
+        ShowMessage('Nenhum registro está selecionado, otário!');     
+    
+    end;
+  end;
+end;
+
+procedure Tfornecedor.SpeedButton8Click(Sender: TObject);
+begin
+  if not DataModule1.tbfornecedor.IsEmpty then
+  begin
+    DataModule1.tbfornecedor.Edit; // coloca o registro em modo de edição
+  end
+  else
+    ShowMessage('Nenhum Registro selecionado para editar');
 end;
 
 end.

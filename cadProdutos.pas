@@ -17,25 +17,11 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Label10: TLabel;
-    DBGrid1: TDBGrid;
     DBEdit1: TDBEdit;
     DBEdit2: TDBEdit;
     DBEdit3: TDBEdit;
     DBEdit4: TDBEdit;
     DBEdit5: TDBEdit;
-    Panel1: TPanel;
-    Panel4: TPanel;
-    Image1: TImage;
-    SpeedButton1: TSpeedButton;
-    SpeedButton6: TSpeedButton;
-    Panel2: TPanel;
-    Image2: TImage;
-    SpeedButton2: TSpeedButton;
-    SpeedButton4: TSpeedButton;
-    Panel3: TPanel;
-    Image3: TImage;
-    SpeedButton3: TSpeedButton;
-    SpeedButton5: TSpeedButton;
     DBEdit8: TDBEdit;
   private
     { Private declarations }

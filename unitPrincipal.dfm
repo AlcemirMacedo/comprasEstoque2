@@ -32,6 +32,7 @@ object Form1: TForm1
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = -3
     object Shape2: TShape
       AlignWithMargins = True
       Left = 1329
@@ -257,7 +258,8 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
       Layout = tlCenter
-      ExplicitHeight = 29
+      ExplicitLeft = 77
+      ExplicitTop = 10
     end
     object Panel5: TPanel
       Left = 1333
@@ -282,9 +284,9 @@ object Form1: TForm1
     TabOrder = 1
     object Panel4: TPanel
       Left = 0
-      Top = 519
+      Top = 528
       Width = 1150
-      Height = 67
+      Height = 58
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 0
@@ -293,7 +295,7 @@ object Form1: TForm1
         Left = 1015
         Top = 3
         Width = 125
-        Height = 54
+        Height = 45
         Margins.Right = 10
         Margins.Bottom = 10
         Align = alRight
@@ -502,13 +504,14 @@ object Form1: TForm1
           F2490E401CF2490E401CF2490E401CF2490E401CF249FF075D541B5012791FA7
           0000000049454E44AE426082}
         ExplicitLeft = 776
+        ExplicitHeight = 54
       end
       object Label4: TLabel
         AlignWithMargins = True
         Left = 782
         Top = 3
         Width = 215
-        Height = 54
+        Height = 45
         Margins.Right = 15
         Margins.Bottom = 10
         Align = alRight
@@ -532,6 +535,7 @@ object Form1: TForm1
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitTop = 1
       object lblMapa: TLabel
         AlignWithMargins = True
         Left = 10
@@ -555,12 +559,13 @@ object Form1: TForm1
       Left = 0
       Top = 36
       Width = 1150
-      Height = 483
+      Height = 492
       Align = alClient
       BevelOuter = bvNone
       Color = 4079909
       ParentBackground = False
       TabOrder = 2
+      ExplicitHeight = 483
     end
   end
   object Panel2: TPanel

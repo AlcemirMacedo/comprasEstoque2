@@ -150,6 +150,7 @@ object DataModule1: TDataModule1
     object tbprodutoidproduto: TFDAutoIncField
       FieldName = 'idproduto'
       Origin = 'idproduto'
+      ReadOnly = True
     end
     object tbprodutonome: TStringField
       FieldName = 'nome'
@@ -189,6 +190,31 @@ object DataModule1: TDataModule1
   object DSproduto: TDataSource
     DataSet = tbproduto
     Left = 272
+    Top = 152
+  end
+  object tbbancos: TFDTable
+    Active = True
+    IndexFieldNames = 'cod'
+    DetailFields = 'banco;cod'
+    Connection = conexao
+    TableName = 'comprasestoque.bancos'
+    Left = 352
+    Top = 96
+    object tbbancoscod: TIntegerField
+      FieldName = 'cod'
+      Origin = 'cod'
+      Required = True
+    end
+    object tbbancosbanco: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'banco'
+      Origin = 'banco'
+      Size = 50
+    end
+  end
+  object DSbancos: TDataSource
+    DataSet = tbbancos
+    Left = 352
     Top = 152
   end
 end

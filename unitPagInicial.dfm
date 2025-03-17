@@ -37,6 +37,8 @@ object painelInicial: TpainelInicial
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 772
+      ExplicitTop = 6
       object Label15: TLabel
         Left = 8
         Top = 5

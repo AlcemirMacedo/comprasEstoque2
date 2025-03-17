@@ -43,6 +43,10 @@ type
     tbprodutoqtd_estoque: TIntegerField;
     tbprodutoidcategoria_fk: TIntegerField;
     tbprodutodata_cadastro: TDateTimeField;
+    tbbancos: TFDTable;
+    DSbancos: TDataSource;
+    tbbancoscod: TIntegerField;
+    tbbancosbanco: TStringField;
   private
     { Private declarations }
   public
