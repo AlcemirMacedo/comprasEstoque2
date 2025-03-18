@@ -6,14 +6,14 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
   Vcl.Grids, Vcl.DBGrids, Vcl.Mask, Vcl.DBCtrls, Vcl.Buttons,
-  Vcl.Imaging.pngimage;
+  Vcl.Imaging.pngimage, MaskUtils;
 
 type
   Tfornecedor = class(TForm)
     painelFornecedor: TPanel;
     fantasiaF: TDBEdit;
     Label2: TLabel;
-    dpfcnpjF: TDBEdit;
+    cpfcnpjF: TDBEdit;
     Label3: TLabel;
     razaoF: TDBEdit;
     Label4: TLabel;
@@ -69,6 +69,23 @@ type
     Label20: TLabel;
     Panel6: TPanel;
     DBGrid1: TDBGrid;
+    Label21: TLabel;
+    pesquisa: TEdit;
+    Panel7: TPanel;
+    pesqcpf: TRadioButton;
+    pesqfantasia: TRadioButton;
+    Label22: TLabel;
+    Label23: TLabel;
+    Label24: TLabel;
+    Label27: TLabel;
+    Label25: TLabel;
+    Label26: TLabel;
+    Label28: TLabel;
+    Label29: TLabel;
+    Label30: TLabel;
+    Label31: TLabel;
+    Label32: TLabel;
+    Label33: TLabel;
     procedure Panel1Click(Sender: TObject);
     procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
@@ -76,6 +93,7 @@ type
     procedure SpeedButton4Click(Sender: TObject);
     procedure SpeedButton6Click(Sender: TObject);
     procedure SpeedButton8Click(Sender: TObject);
+    procedure pesquisaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -113,10 +131,45 @@ begin
 self.close;
 end;
 
+procedure Tfornecedor.pesquisaChange(Sender: TObject);
+begin
+  DataModule1.tbfornecedor.Filtered := False; // remove qualquer filtro existente
+
+  if pesquisa.Text <> '' then
+  begin
+  DataModule1.tbfornecedor.FilterOptions := [foCaseInsensitive];
+    if (pesqcpf.Checked = True) then
+    begin
+      DataModule1.tbfornecedor.Filter := 'cnpjcpf LIKE ' + QuotedStr('%' + pesquisa.Text + '%');
+      DataModule1.tbfornecedor.Filtered := True;
+    end;
+    if (pesqfantasia.Checked = True) then
+    begin
+      DataModule1.tbfornecedor.Filter := 'nomefantasia LIKE ' + QuotedStr('%' + pesquisa.Text + '%');
+      DataModule1.tbfornecedor.Filtered := True;
+    end;
+  end;
+
+end;
 procedure Tfornecedor.SpeedButton4Click(Sender: TObject);
 begin
 
   try
+
+    //Verifica se os campos obrigatórios foram preenchidos
+    if Trim(DataModule1.tbfornecedor.FieldByName('nomefantasia').AsString) = '' then
+    begin
+      ShowMessage('Campo Nome Fantasia obrigatório!');
+      Exit; // sai do procedimento sem salvar
+    end;
+
+    if Trim(DataModule1.tbfornecedor.FieldByName('razaosocial').AsString) = '' then
+    begin
+      ShowMessage('Campo Nome Razão Social é obrigatório!');
+      Exit; // sai do procedimento sem salvar
+    end;
+
+
     if DataModule1.tbfornecedor.State in [dsEdit, dsInsert] then
     begin
       DataModule1.tbfornecedor.Post; // Salva as alterações

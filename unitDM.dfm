@@ -1,7 +1,7 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
-  Height = 385
-  Width = 589
+  Height = 289
+  Width = 484
   object conexao: TFDConnection
     Params.Strings = (
       'Database=comprasestoque'
@@ -9,22 +9,22 @@ object DataModule1: TDataModule1
       'DriverID=MySQL')
     Connected = True
     LoginPrompt = False
-    Left = 96
-    Top = 96
+    Left = 75
+    Top = 88
   end
   object DSfornecedor: TDataSource
     AutoEdit = False
     DataSet = tbfornecedor
-    Left = 184
-    Top = 152
+    Left = 163
+    Top = 144
   end
   object tbfornecedor: TFDTable
     Active = True
     IndexFieldNames = 'idfornecedor'
     Connection = conexao
     TableName = 'comprasestoque.fornecedor'
-    Left = 184
-    Top = 96
+    Left = 163
+    Top = 88
     object tbfornecedoridfornecedor: TFDAutoIncField
       FieldName = 'idfornecedor'
       Origin = 'idfornecedor'
@@ -145,8 +145,8 @@ object DataModule1: TDataModule1
     IndexFieldNames = 'idproduto'
     Connection = conexao
     TableName = 'comprasestoque.produto'
-    Left = 272
-    Top = 96
+    Left = 251
+    Top = 88
     object tbprodutoidproduto: TFDAutoIncField
       FieldName = 'idproduto'
       Origin = 'idproduto'
@@ -189,8 +189,8 @@ object DataModule1: TDataModule1
   end
   object DSproduto: TDataSource
     DataSet = tbproduto
-    Left = 272
-    Top = 152
+    Left = 251
+    Top = 144
   end
   object tbbancos: TFDTable
     Active = True
@@ -198,8 +198,8 @@ object DataModule1: TDataModule1
     DetailFields = 'banco;cod'
     Connection = conexao
     TableName = 'comprasestoque.bancos'
-    Left = 352
-    Top = 96
+    Left = 331
+    Top = 88
     object tbbancoscod: TIntegerField
       FieldName = 'cod'
       Origin = 'cod'
@@ -214,7 +214,7 @@ object DataModule1: TDataModule1
   end
   object DSbancos: TDataSource
     DataSet = tbbancos
-    Left = 352
-    Top = 152
+    Left = 331
+    Top = 144
   end
 end
