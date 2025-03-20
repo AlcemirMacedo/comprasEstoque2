@@ -15,14 +15,50 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    Label1: TLabel;
+    Label27: TLabel;
+    Label24: TLabel;
     Label6: TLabel;
-    Label10: TLabel;
+    Label7: TLabel;
+    nomeP: TDBEdit;
+    estoqueP: TDBEdit;
+    descP: TDBEdit;
+    Panel1: TPanel;
+    Panel5: TPanel;
+    Image4: TImage;
+    SpeedButton7: TSpeedButton;
+    SpeedButton8: TSpeedButton;
+    Panel4: TPanel;
+    Image1: TImage;
+    SpeedButton1: TSpeedButton;
+    SpeedButton6: TSpeedButton;
+    Panel2: TPanel;
+    Image2: TImage;
+    SpeedButton2: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    Panel3: TPanel;
+    Image3: TImage;
+    SpeedButton3: TSpeedButton;
+    SpeedButton5: TSpeedButton;
+    Panel6: TPanel;
+    Label21: TLabel;
+    DBGrid1: TDBGrid;
+    pesquisa: TEdit;
+    Panel7: TPanel;
+    Label22: TLabel;
+    pesqcpf: TRadioButton;
+    pesqfantasia: TRadioButton;
+    unudadeP: TDBLookupComboBox;
+    categoriaP: TDBLookupComboBox;
     DBEdit1: TDBEdit;
-    DBEdit2: TDBEdit;
-    DBEdit3: TDBEdit;
-    DBEdit4: TDBEdit;
-    DBEdit5: TDBEdit;
-    DBEdit8: TDBEdit;
+    DBComboBox1: TDBComboBox;
+    Label8: TLabel;
+    procedure SpeedButton4Click(Sender: TObject);
+    procedure SpeedButton5Click(Sender: TObject);
+    procedure SpeedButton8Click(Sender: TObject);
+    procedure SpeedButton6Click(Sender: TObject);
+    procedure pesquisaChange(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,5 +73,113 @@ implementation
 {$R *.dfm}
 
 uses unitDM;
+
+procedure Tprodutos.FormShow(Sender: TObject);
+begin
+DBComboBox1.ItemIndex := 0;
+end;
+
+procedure Tprodutos.pesquisaChange(Sender: TObject);
+begin
+  DataModule1.tbproduto.Filtered := False; // remove qualquer filtro existente
+
+  if pesquisa.Text <> '' then
+  begin
+    try
+      DataModule1.tbproduto.FilterOptions := [foCaseInsensitive];
+
+      DataModule1.tbproduto.Filter := 'nome LIKE ' + QuotedStr('%' + pesquisa.Text + '%');
+      DataModule1.tbproduto.Filtered := True;
+    except
+      on E: Exception do
+        ShowMessage('Nenhum registro está selecionado');
+    end;
+  end;
+end;
+
+procedure Tprodutos.SpeedButton4Click(Sender: TObject);
+begin
+try
+    //Validando os campos
+    if Trim(DataModule1.tbproduto.FieldByName('nome').AsString) = '' then
+    begin
+      ShowMessage('o campo Nome do Produto é obrigatório!');
+      Exit;
+    end;
+
+    if Trim(DataModule1.tbproduto.FieldByName('descricao').AsString) = '' then
+    begin
+      ShowMessage('o campo Descrição é obrigatório!');
+      Exit;
+    end;
+
+    if Trim(DataModule1.tbproduto.FieldByName('idunidadefk').AsString) = '' then
+    begin
+      ShowMessage('o campo Unidade de Medida é obrigatório!');
+      Exit;
+    end;
+
+    if Trim(DataModule1.tbproduto.FieldByName('idcategoria_fk').AsString) = '' then
+    begin
+      ShowMessage('o campo Categoria é obrigatório!');
+      Exit;
+    end;
+
+    if Trim(DataModule1.tbproduto.FieldByName('idcategoria_fk').AsString) = '' then
+    begin
+      ShowMessage('o campo Categoria é obrigatório!');
+      Exit;
+    end;
+
+    // iniciando a ação de salvar
+    if DataModule1.tbproduto.State in [dsEdit, dsInsert] then
+    begin
+      DataModule1.tbproduto.Post; // Salva as alterações
+      ShowMessage('Alterações salvas com sucesso!');
+    end
+    else
+      ShowMessage('Nenhum registro está em modo de edição ou inserção.');
+  except
+    on E: Exception do
+    begin
+      ShowMessage('Erro ao salvar alterações: ' + E.Message);
+      DataModule1.tbproduto.Cancel; // Cancela as alterações caso ocorra erro
+    end;
+  end;
+end;
+
+procedure Tprodutos.SpeedButton5Click(Sender: TObject);
+begin
+//Prepara o dataset para um novo registro
+DataModule1.tbproduto.Append;
+nomeP.SetFocus;
+end;
+
+procedure Tprodutos.SpeedButton6Click(Sender: TObject);
+begin
+if not DataModule1.tbproduto.IsEmpty then // Verifica se tem alguém selecionado
+  // pergunta ao usuário se ele deseja excluir o registro
+  if MessageDlg('Tem certeza que deseja excluir esse fornecedor?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  begin
+    try
+      DataModule1.tbproduto.Delete; // Remove o registro atual
+      ShowMessage('Registro excluído com sucesso!');
+    except
+      on E: Exception do
+        ShowMessage('Nenhum registro está selecionado!');
+
+    end;
+  end;
+end;
+
+procedure Tprodutos.SpeedButton8Click(Sender: TObject);
+  begin
+    if not DataModule1.tbproduto.IsEmpty then
+    begin
+      DataModule1.tbproduto.Edit; // coloca o registro em modo de edição
+    end
+    else
+      ShowMessage('Nenhum Registro selecionado para editar');
+  end;
 
 end.

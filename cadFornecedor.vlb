@@ -34,9 +34,6 @@ Coordinates=454,564,52,51
 [SpeedButton8]
 Coordinates=1148,632,84,33
 
-[DBEdit1]
-Coordinates=1076,632,54,33
-
 [cidadeF]
 Coordinates=1006,632,53,33
 
@@ -67,9 +64,6 @@ Coordinates=239,496,46,51
 [SpeedButton5]
 Coordinates=582,632,84,33
 
-[Label1]
-Coordinates=750,10,46,51
-
 [Label5]
 Coordinates=391,564,46,51
 
@@ -93,9 +87,6 @@ Coordinates=1016,10,52,51
 
 [DataModule1.tbproduto]
 Coordinates=187,10,129,177
-
-[DBComboBox1]
-Coordinates=153,632,89,33
 
 [Label17]
 Coordinates=959,496,52,51
@@ -197,7 +188,7 @@ Coordinates=503,10,58,51
 Coordinates=579,10,52,51
 
 []
-Coordinates=247,206,82,33
+Coordinates=1076,632,54,33
 Visible=True
 
 [cpfcnpjF]

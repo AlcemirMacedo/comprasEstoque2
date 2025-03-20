@@ -1,7 +1,7 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
-  Height = 289
-  Width = 484
+  Height = 494
+  Width = 804
   object conexao: TFDConnection
     Params.Strings = (
       'Database=comprasestoque'
@@ -9,26 +9,24 @@ object DataModule1: TDataModule1
       'DriverID=MySQL')
     Connected = True
     LoginPrompt = False
-    Left = 75
-    Top = 88
+    Left = 90
+    Top = 87
   end
   object DSfornecedor: TDataSource
     AutoEdit = False
     DataSet = tbfornecedor
-    Left = 163
+    Left = 171
     Top = 144
   end
   object tbfornecedor: TFDTable
-    Active = True
     IndexFieldNames = 'idfornecedor'
     Connection = conexao
     TableName = 'comprasestoque.fornecedor'
-    Left = 163
+    Left = 171
     Top = 88
     object tbfornecedoridfornecedor: TFDAutoIncField
       FieldName = 'idfornecedor'
       Origin = 'idfornecedor'
-      ProviderFlags = [pfInWhere, pfInKey]
       ReadOnly = True
     end
     object tbfornecedornomefantasia: TStringField
@@ -61,53 +59,46 @@ object DataModule1: TDataModule1
       Origin = 'inscmunicipal'
       Size = 50
     end
-    object tbfornecedorlogradouro: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'logradouro'
-      Origin = 'logradouro'
-      Size = 11
-    end
     object tbfornecedorendereco: TStringField
-      AutoGenerateValue = arDefault
       FieldName = 'endereco'
       Origin = 'endereco'
+      Required = True
       Size = 120
     end
     object tbfornecedorbairro: TStringField
-      AutoGenerateValue = arDefault
       FieldName = 'bairro'
       Origin = 'bairro'
+      Required = True
       Size = 120
     end
     object tbfornecedorcidade: TStringField
-      AutoGenerateValue = arDefault
       FieldName = 'cidade'
       Origin = 'cidade'
+      Required = True
       Size = 120
     end
     object tbfornecedoruf: TStringField
-      AutoGenerateValue = arDefault
       FieldName = 'uf'
       Origin = 'uf'
+      Required = True
       Size = 2
     end
     object tbfornecedorcep: TStringField
       AutoGenerateValue = arDefault
       FieldName = 'cep'
       Origin = 'cep'
-      EditMask = '#####-###;1;_'
       Size = 10
     end
     object tbfornecedornomecontato: TStringField
-      AutoGenerateValue = arDefault
       FieldName = 'nomecontato'
       Origin = 'nomecontato'
+      Required = True
       Size = 50
     end
     object tbfornecedortelcontato: TStringField
-      AutoGenerateValue = arDefault
       FieldName = 'telcontato'
       Origin = 'telcontato'
+      Required = True
       Size = 50
     end
     object tbfornecedoremail: TStringField
@@ -141,16 +132,14 @@ object DataModule1: TDataModule1
     end
   end
   object tbproduto: TFDTable
-    Active = True
     IndexFieldNames = 'idproduto'
     Connection = conexao
-    TableName = 'comprasestoque.produto'
+    TableName = 'produto'
     Left = 251
     Top = 88
     object tbprodutoidproduto: TFDAutoIncField
       FieldName = 'idproduto'
       Origin = 'idproduto'
-      ReadOnly = True
     end
     object tbprodutonome: TStringField
       FieldName = 'nome'
@@ -159,15 +148,15 @@ object DataModule1: TDataModule1
       Size = 50
     end
     object tbprodutodescricao: TStringField
-      AutoGenerateValue = arDefault
       FieldName = 'descricao'
       Origin = 'descricao'
+      Required = True
       Size = 255
     end
     object tbprodutopreco: TBCDField
+      AutoGenerateValue = arDefault
       FieldName = 'preco'
       Origin = 'preco'
-      Required = True
       Precision = 10
       Size = 2
     end
@@ -177,23 +166,34 @@ object DataModule1: TDataModule1
       Required = True
     end
     object tbprodutoidcategoria_fk: TIntegerField
-      AutoGenerateValue = arDefault
       FieldName = 'idcategoria_fk'
       Origin = 'idcategoria_fk'
+      Required = True
+    end
+    object tbprodutotipo: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'tipo'
+      Origin = 'tipo'
+      Size = 50
     end
     object tbprodutodata_cadastro: TDateTimeField
       AutoGenerateValue = arDefault
       FieldName = 'data_cadastro'
       Origin = 'data_cadastro'
     end
+    object tbprodutoidunidadefk: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'idunidadefk'
+      Origin = 'idunidadefk'
+    end
   end
   object DSproduto: TDataSource
+    AutoEdit = False
     DataSet = tbproduto
     Left = 251
     Top = 144
   end
   object tbbancos: TFDTable
-    Active = True
     IndexFieldNames = 'cod'
     DetailFields = 'banco;cod'
     Connection = conexao
@@ -213,8 +213,134 @@ object DataModule1: TDataModule1
     end
   end
   object DSbancos: TDataSource
+    AutoEdit = False
     DataSet = tbbancos
     Left = 331
     Top = 144
+  end
+  object tbunidade: TFDTable
+    IndexFieldNames = 'unidadeID'
+    Connection = conexao
+    TableName = 'comprasestoque.unidademedida'
+    Left = 408
+    Top = 88
+    object tbunidadeunidadeID: TFDAutoIncField
+      FieldName = 'unidadeID'
+      Origin = 'unidadeID'
+      ReadOnly = True
+    end
+    object tbunidadedescricao: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'descricao'
+      Origin = 'descricao'
+      Size = 5
+    end
+  end
+  object DSunidade: TDataSource
+    AutoEdit = False
+    DataSet = tbunidade
+    Left = 408
+    Top = 144
+  end
+  object tbcategoria: TFDTable
+    IndexFieldNames = 'idcategoria'
+    Connection = conexao
+    TableName = 'comprasestoque.categoria'
+    Left = 496
+    Top = 88
+    object tbcategoriaidcategoria: TFDAutoIncField
+      FieldName = 'idcategoria'
+      Origin = 'idcategoria'
+      ReadOnly = True
+    end
+    object tbcategoriadescricao_cat: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'descricao_cat'
+      Origin = 'descricao_cat'
+      Size = 50
+    end
+  end
+  object DScategoria: TDataSource
+    AutoEdit = False
+    DataSet = tbcategoria
+    Left = 496
+    Top = 144
+  end
+  object tbfuncionarios: TFDTable
+    IndexFieldNames = 'pessoasID'
+    DetailFields = 'cpf;funcao;nome;pessoasID'
+    Connection = conexao
+    TableName = 'comprasestoque.funcionarios'
+    Left = 586
+    Top = 86
+    object tbfuncionariospessoasID: TFDAutoIncField
+      FieldName = 'pessoasID'
+      Origin = 'pessoasID'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object tbfuncionariosnome: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'nome'
+      Origin = 'nome'
+      Size = 100
+    end
+    object tbfuncionariosfuncao: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'funcao'
+      Origin = 'funcao'
+      Size = 100
+    end
+    object tbfuncionarioscpf: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'cpf'
+      Origin = 'cpf'
+      EditMask = '###.###.###-##;1;_'
+    end
+  end
+  object DSfuncionarios: TDataSource
+    AutoEdit = False
+    DataSet = tbfuncionarios
+    Left = 589
+    Top = 144
+  end
+  object tbalmoxarifado: TFDTable
+    Active = True
+    IndexFieldNames = 'almoxarifadoID'
+    Connection = conexao
+    TableName = 'comprasestoque.almoxarifado'
+    Left = 168
+    Top = 272
+    object tbalmoxarifadoalmoxarifadoID: TFDAutoIncField
+      FieldName = 'almoxarifadoID'
+      Origin = 'almoxarifadoID'
+    end
+    object tbalmoxarifadodescricao: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'descricao'
+      Origin = 'descricao'
+      Size = 100
+    end
+    object tbalmoxarifadoidresponsavelautorizacao: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'idresponsavelautorizacao'
+      Origin = 'idresponsavelautorizacao'
+    end
+    object tbalmoxarifadoidresponsaveldespacho: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'idresponsaveldespacho'
+      Origin = 'idresponsaveldespacho'
+    end
+    object tbalmoxarifadoniveldotacao: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'niveldotacao'
+      Origin = 'niveldotacao'
+      Size = 45
+    end
+  end
+  object DSalmoxarifado: TDataSource
+    DataSet = tbalmoxarifado
+    Left = 168
+    Top = 336
   end
 end

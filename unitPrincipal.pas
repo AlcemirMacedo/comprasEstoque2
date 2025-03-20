@@ -38,16 +38,32 @@ type
     Panel7: TPanel;
     Label5: TLabel;
     Shape4: TShape;
-    produtos: TLabel;
     Panel9: TPanel;
     Shape5: TShape;
     Label6: TLabel;
+    Panel10: TPanel;
+    Shape6: TShape;
+    Label7: TLabel;
+    funcionarios: TLabel;
+    Panel11: TPanel;
+    Image5: TImage;
+    Label8: TLabel;
+    SpeedButton2: TSpeedButton;
+    Panel12: TPanel;
+    Image6: TImage;
+    Label9: TLabel;
+    SpeedButton3: TSpeedButton;
+    Panel13: TPanel;
+    Image7: TImage;
+    Label10: TLabel;
+    SpeedButton4: TSpeedButton;
     procedure FormShow(Sender: TObject);
     procedure Panel5Click(Sender: TObject);
     procedure menuFornecedorClick(Sender: TObject);
     procedure lblInicialClick(Sender: TObject);
     procedure lblFornecedorClick(Sender: TObject);
-    procedure produtosClick(Sender: TObject);
+    procedure funcionariosClick(Sender: TObject);
+    procedure Label8Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -64,7 +80,7 @@ implementation
 
 {$R *.dfm}
 
-uses cadFornecedor, unitPagInicial, cadProdutos;
+uses cadFornecedor, unitPagInicial, cadProdutos, cadFuncionarios;
 
 procedure TForm1.FormShow(Sender: TObject);
 begin
@@ -120,7 +136,7 @@ begin
 Application.Terminate;
 end;
 
-procedure TForm1.produtosClick(Sender: TObject);
+procedure TForm1.funcionariosClick(Sender: TObject);
 var
   i:integer;
 begin
@@ -128,9 +144,22 @@ begin
         painelPrincipal.Controls[i].Free;
 
     Application.CreateForm(Tprodutos, produtos);
-    lblMapa.Caption := fornecedor.Caption;
+    lblMapa.Caption := produtos.Caption;
     produtos.Parent := painelPrincipal;
     produtos.Show;
+end;
+
+procedure TForm1.Label8Click(Sender: TObject);
+var
+  i:integer;
+begin
+    for i := painelPrincipal.ControlCount - 1 downto 0 do
+        painelPrincipal.Controls[i].Free;
+
+    Application.CreateForm(Tfuncionarios, funcionarios);
+    lblMapa.Caption := funcionarios.Caption;
+    funcionarios.Parent := painelPrincipal;
+    funcionarios.Show;
 end;
 
 end.

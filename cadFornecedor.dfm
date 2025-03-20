@@ -5,7 +5,7 @@ object fornecedor: Tfornecedor
   BorderIcons = []
   BorderStyle = bsNone
   Caption = 'Fornecedores'
-  ClientHeight = 710
+  ClientHeight = 809
   ClientWidth = 1311
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
@@ -15,18 +15,20 @@ object fornecedor: Tfornecedor
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 19
   object painelFornecedor: TPanel
     Left = 0
     Top = 0
     Width = 1311
-    Height = 710
+    Height = 809
     Align = alClient
     BevelOuter = bvNone
     Color = 2171668
     ParentBackground = False
     TabOrder = 0
+    ExplicitHeight = 710
     object Label2: TLabel
       Left = 20
       Top = 14
@@ -69,15 +71,6 @@ object fornecedor: Tfornecedor
       Width = 135
       Height = 19
       Caption = 'Inscri'#231#227'o Municipal'
-      Color = clCream
-      ParentColor = False
-    end
-    object Label1: TLabel
-      Left = 133
-      Top = 195
-      Width = 86
-      Height = 19
-      Caption = 'Logradourto'
       Color = clCream
       ParentColor = False
     end
@@ -154,7 +147,7 @@ object fornecedor: Tfornecedor
       ParentColor = False
     end
     object Label15: TLabel
-      Left = 266
+      Left = 133
       Top = 195
       Width = 64
       Height = 19
@@ -209,8 +202,8 @@ object fornecedor: Tfornecedor
       ParentFont = False
     end
     object Label27: TLabel
-      Left = 110
-      Top = 73
+      Left = 114
+      Top = 72
       Width = 5
       Height = 15
       Caption = '*'
@@ -239,7 +232,7 @@ object fornecedor: Tfornecedor
       ParentFont = False
     end
     object Label26: TLabel
-      Left = 332
+      Left = 199
       Top = 195
       Width = 5
       Height = 15
@@ -346,7 +339,7 @@ object fornecedor: Tfornecedor
     object fantasiaF: TDBEdit
       Left = 21
       Top = 39
-      Width = 547
+      Width = 545
       Height = 27
       BevelEdges = []
       BevelInner = bvNone
@@ -426,13 +419,14 @@ object fornecedor: Tfornecedor
     object Panel1: TPanel
       AlignWithMargins = True
       Left = 3
-      Top = 633
+      Top = 732
       Width = 1288
       Height = 74
       Margins.Right = 20
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 13
+      ExplicitTop = 633
       object Panel5: TPanel
         AlignWithMargins = True
         Left = 107
@@ -777,10 +771,8 @@ object fornecedor: Tfornecedor
           Align = alClient
           Flat = True
           OnClick = SpeedButton6Click
-          ExplicitLeft = 40
-          ExplicitTop = 32
-          ExplicitWidth = 23
-          ExplicitHeight = 22
+          ExplicitLeft = -3
+          ExplicitTop = -3
         end
       end
       object Panel2: TPanel
@@ -1132,9 +1124,9 @@ object fornecedor: Tfornecedor
       Font.Height = -16
       Font.Name = 'Futura Bk BT'
       Font.Style = []
-      MaxLength = 9
       ParentFont = False
       TabOrder = 5
+      OnExit = cepFExit
     end
     object ufF: TDBEdit
       Left = 511
@@ -1187,7 +1179,7 @@ object fornecedor: Tfornecedor
     object teleF: TDBEdit
       Left = 266
       Top = 344
-      Width = 142
+      Width = 144
       Height = 27
       Color = 15263976
       DataField = 'telcontato'
@@ -1232,82 +1224,45 @@ object fornecedor: Tfornecedor
       ParentFont = False
       TabOrder = 12
     end
-    object DBComboBox1: TDBComboBox
-      Left = 133
-      Top = 220
-      Width = 116
-      Height = 27
-      DataField = 'logradouro'
-      DataSource = DataModule1.DSfornecedor
-      Font.Charset = ANSI_CHARSET
-      Font.Color = -1
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      Items.Strings = (
-        'Rua'
-        'Avenida'
-        'Travessa'
-        'Beco'
-        'Estrada'
-        'Ramal')
-      ParentFont = False
-      TabOrder = 14
-    end
-    object DBEdit1: TDBEdit
-      Left = 266
-      Top = 220
-      Width = 301
-      Height = 27
-      DataField = 'endereco'
-      DataSource = DataModule1.DSfornecedor
-      Font.Charset = ANSI_CHARSET
-      Font.Color = -1
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 15
-    end
     object GroupBox1: TGroupBox
       Left = 21
-      Top = 444
+      Top = 450
       Width = 546
-      Height = 169
+      Height = 183
       Caption = 'GroupBox1'
-      TabOrder = 16
+      TabOrder = 14
       object Label16: TLabel
-        Left = 9
-        Top = -1
-        Width = 120
+        Left = 8
+        Top = 0
+        Width = 125
         Height = 19
         Caption = 'Dados Banc'#225'rios'
         Transparent = False
       end
       object Label18: TLabel
         Left = 22
-        Top = 25
+        Top = 36
         Width = 43
         Height = 19
         Caption = 'Banco'
       end
       object Label19: TLabel
         Left = 22
-        Top = 87
+        Top = 98
         Width = 43
         Height = 19
         Caption = 'Conta'
       end
       object Label20: TLabel
         Left = 187
-        Top = 87
+        Top = 98
         Width = 56
         Height = 19
         Caption = 'Ag'#234'ncia'
       end
       object DBLookupComboBox1: TDBLookupComboBox
         Left = 22
-        Top = 50
+        Top = 61
         Width = 291
         Height = 27
         DataField = 'fk_cod_banco'
@@ -1325,7 +1280,7 @@ object fornecedor: Tfornecedor
       end
       object DBEdit2: TDBEdit
         Left = 24
-        Top = 112
+        Top = 123
         Width = 145
         Height = 27
         DataField = 'numconta'
@@ -1340,7 +1295,7 @@ object fornecedor: Tfornecedor
       end
       object DBEdit3: TDBEdit
         Left = 189
-        Top = 112
+        Top = 123
         Width = 124
         Height = 27
         DataField = 'agencia'
@@ -1358,14 +1313,15 @@ object fornecedor: Tfornecedor
       Left = 608
       Top = 0
       Width = 703
-      Height = 630
+      Height = 729
       Align = alRight
       BevelOuter = bvNone
       Caption = 'Panel6'
-      TabOrder = 17
+      TabOrder = 15
+      ExplicitHeight = 630
       object Label21: TLabel
         Left = 344
-        Top = 41
+        Top = 39
         Width = 67
         Height = 19
         Caption = 'Pesquisar'
@@ -1383,7 +1339,7 @@ object fornecedor: Tfornecedor
         Left = 10
         Top = 98
         Width = 683
-        Height = 529
+        Height = 628
         Margins.Left = 10
         Margins.Top = 98
         Margins.Right = 10
@@ -1410,19 +1366,6 @@ object fornecedor: Tfornecedor
         Columns = <
           item
             Expanded = False
-            FieldName = 'idfornecedor'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = -1
-            Font.Height = -12
-            Font.Name = 'Futura Bk BT'
-            Font.Style = []
-            Title.Caption = 'ID'
-            Title.Color = -1
-            Width = 25
-            Visible = True
-          end
-          item
-            Expanded = False
             FieldName = 'nomefantasia'
             Font.Charset = ANSI_CHARSET
             Font.Color = -1
@@ -1431,6 +1374,11 @@ object fornecedor: Tfornecedor
             Font.Style = []
             Title.Caption = 'Nome Fantasia'
             Title.Color = -1
+            Title.Font.Charset = ANSI_CHARSET
+            Title.Font.Color = -1
+            Title.Font.Height = -13
+            Title.Font.Name = 'Futura Bk BT'
+            Title.Font.Style = [fsBold]
             Width = 195
             Visible = True
           end
@@ -1444,6 +1392,11 @@ object fornecedor: Tfornecedor
             Font.Style = []
             Title.Caption = 'CPF / CNPJ'
             Title.Color = -1
+            Title.Font.Charset = ANSI_CHARSET
+            Title.Font.Color = -1
+            Title.Font.Height = -13
+            Title.Font.Name = 'Futura Bk BT'
+            Title.Font.Style = [fsBold]
             Width = 168
             Visible = True
           end
@@ -1456,13 +1409,18 @@ object fornecedor: Tfornecedor
             Font.Name = 'Futura Bk BT'
             Font.Style = []
             Title.Caption = 'Raz'#227'o Social'
+            Title.Font.Charset = ANSI_CHARSET
+            Title.Font.Color = -1
+            Title.Font.Height = -13
+            Title.Font.Name = 'Futura Bk BT'
+            Title.Font.Style = [fsBold]
             Width = 258
             Visible = True
           end>
       end
       object pesquisa: TEdit
         Left = 344
-        Top = 65
+        Top = 63
         Width = 349
         Height = 27
         Font.Charset = ANSI_CHARSET
@@ -1476,7 +1434,7 @@ object fornecedor: Tfornecedor
       end
       object Panel7: TPanel
         Left = 10
-        Top = 39
+        Top = 37
         Width = 295
         Height = 53
         BevelOuter = bvNone
@@ -1533,6 +1491,19 @@ object fornecedor: Tfornecedor
           TabOrder = 1
         end
       end
+    end
+    object Edit1: TEdit
+      Left = 129
+      Top = 220
+      Width = 437
+      Height = 27
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Futura Bk BT'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 16
     end
   end
 end
