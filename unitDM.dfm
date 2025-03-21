@@ -1,7 +1,7 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
   Height = 494
-  Width = 804
+  Width = 760
   object conexao: TFDConnection
     Params.Strings = (
       'Database=comprasestoque'
@@ -19,6 +19,7 @@ object DataModule1: TDataModule1
     Top = 144
   end
   object tbfornecedor: TFDTable
+    Active = True
     IndexFieldNames = 'idfornecedor'
     Connection = conexao
     TableName = 'comprasestoque.fornecedor'
@@ -132,6 +133,7 @@ object DataModule1: TDataModule1
     end
   end
   object tbproduto: TFDTable
+    Active = True
     IndexFieldNames = 'idproduto'
     Connection = conexao
     TableName = 'produto'
@@ -140,6 +142,7 @@ object DataModule1: TDataModule1
     object tbprodutoidproduto: TFDAutoIncField
       FieldName = 'idproduto'
       Origin = 'idproduto'
+      ReadOnly = True
     end
     object tbprodutonome: TStringField
       FieldName = 'nome'
@@ -194,6 +197,7 @@ object DataModule1: TDataModule1
     Top = 144
   end
   object tbbancos: TFDTable
+    Active = True
     IndexFieldNames = 'cod'
     DetailFields = 'banco;cod'
     Connection = conexao
@@ -219,6 +223,7 @@ object DataModule1: TDataModule1
     Top = 144
   end
   object tbunidade: TFDTable
+    Active = True
     IndexFieldNames = 'unidadeID'
     Connection = conexao
     TableName = 'comprasestoque.unidademedida'
@@ -243,6 +248,7 @@ object DataModule1: TDataModule1
     Top = 144
   end
   object tbcategoria: TFDTable
+    Active = True
     IndexFieldNames = 'idcategoria'
     Connection = conexao
     TableName = 'comprasestoque.categoria'
@@ -267,6 +273,7 @@ object DataModule1: TDataModule1
     Top = 144
   end
   object tbfuncionarios: TFDTable
+    Active = True
     IndexFieldNames = 'pessoasID'
     DetailFields = 'cpf;funcao;nome;pessoasID'
     Connection = conexao
@@ -314,6 +321,7 @@ object DataModule1: TDataModule1
     object tbalmoxarifadoalmoxarifadoID: TFDAutoIncField
       FieldName = 'almoxarifadoID'
       Origin = 'almoxarifadoID'
+      ReadOnly = True
     end
     object tbalmoxarifadodescricao: TStringField
       AutoGenerateValue = arDefault
@@ -339,6 +347,7 @@ object DataModule1: TDataModule1
     end
   end
   object DSalmoxarifado: TDataSource
+    AutoEdit = False
     DataSet = tbalmoxarifado
     Left = 168
     Top = 336

@@ -15,21 +15,19 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Copiando estrutura do banco de dados para pmce_tonantins
-CREATE DATABASE IF NOT EXISTS `pmce_tonantins` /*!40100 DEFAULT CHARACTER SET latin1 */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `pmce_tonantins`;
+
 
 -- Copiando estrutura para tabela pmce_tonantins.pessoas
-CREATE TABLE IF NOT EXISTS `pessoas` (
+CREATE TABLE IF NOT EXISTS `funcionarios` (
   `pessoasID` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) DEFAULT NULL,
   `funcao` varchar(100) DEFAULT NULL,
   `cpf` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`pessoasID`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=LATIN1;
 
 -- Copiando dados para a tabela pmce_tonantins.pessoas: ~14 rows (aproximadamente)
-INSERT INTO `pessoas` (`pessoasID`, `nome`, `funcao`, `cpf`) VALUES
+INSERT INTO `funcionarios` (`pessoasID`, `nome`, `funcao`, `cpf`) VALUES
 	(1, 'Cassio Lima', 'Chefe de Almoxarifado', '95271830225'),
 	(2, 'Jhonathan Queiroz', 'Teste', '70514625201'),
 	(3, 'ALCIONE GUIMARAES DE OLIVEIRA', 'SECRETÁRIA MUNICIPAL DE EDUCAÇÃO', '69832528291'),

@@ -32,7 +32,6 @@ object Form1: TForm1
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = -3
     object Shape2: TShape
       AlignWithMargins = True
       Left = 1329
@@ -256,7 +255,6 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
       Layout = tlCenter
-      ExplicitLeft = 74
       ExplicitHeight = 29
     end
     object Panel5: TPanel
@@ -280,7 +278,6 @@ object Form1: TForm1
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitHeight = 586
     object Panel4: TPanel
       Left = 0
       Top = 651
@@ -289,7 +286,6 @@ object Form1: TForm1
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitTop = 528
       object Image3: TImage
         AlignWithMargins = True
         Left = 1018
@@ -539,7 +535,7 @@ object Form1: TForm1
         AlignWithMargins = True
         Left = 10
         Top = 3
-        Width = 80
+        Width = 76
         Height = 30
         Margins.Left = 10
         Align = alLeft
@@ -551,6 +547,7 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         Layout = tlCenter
+        ExplicitHeight = 15
       end
     end
     object painelPrincipal: TPanel
@@ -563,9 +560,6 @@ object Form1: TForm1
       Color = 4079909
       ParentBackground = False
       TabOrder = 2
-      ExplicitLeft = 3
-      ExplicitTop = 33
-      ExplicitHeight = 492
     end
   end
   object Panel2: TPanel
@@ -580,7 +574,6 @@ object Form1: TForm1
     Color = clBlack
     ParentBackground = False
     TabOrder = 2
-    ExplicitHeight = 586
     object Panel27: TPanel
       Left = 0
       Top = 0
@@ -857,8 +850,6 @@ object Form1: TForm1
       BevelOuter = bvNone
       Padding.Right = 30
       TabOrder = 1
-      ExplicitLeft = 3
-      ExplicitTop = 268
       object Shape3: TShape
         Left = 0
         Top = 40
@@ -874,13 +865,14 @@ object Form1: TForm1
         AlignWithMargins = True
         Left = 20
         Top = 3
-        Width = 88
+        Width = 83
         Height = 34
         Cursor = crHandPoint
         Margins.Left = 20
         Align = alLeft
         Caption = 'Funcion'#225'rios'
         OnClick = Label8Click
+        ExplicitHeight = 19
       end
     end
     object Panel3: TPanel
@@ -899,7 +891,6 @@ object Form1: TForm1
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitTop = 213
         object Image2: TImage
           AlignWithMargins = True
           Left = 3
@@ -1045,8 +1036,6 @@ object Form1: TForm1
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitLeft = -6
-        ExplicitTop = -7
         object Image5: TImage
           Left = 0
           Top = 0
@@ -1214,7 +1203,6 @@ object Form1: TForm1
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitTop = 8
         object Image6: TImage
           Left = 0
           Top = 0
@@ -1408,7 +1396,6 @@ object Form1: TForm1
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 3
-        ExplicitTop = 8
         object Image7: TImage
           Left = 0
           Top = 0
@@ -1672,8 +1659,6 @@ object Form1: TForm1
       BevelOuter = bvNone
       Padding.Right = 30
       TabOrder = 5
-      ExplicitLeft = 3
-      ExplicitTop = 268
       object Shape6: TShape
         Left = 0
         Top = 40
@@ -1698,8 +1683,7 @@ object Form1: TForm1
         Caption = 'Produtos'
         Layout = tlCenter
         OnClick = funcionariosClick
-        ExplicitTop = -4
-        ExplicitHeight = 41
+        ExplicitHeight = 19
       end
     end
   end
