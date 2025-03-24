@@ -8,7 +8,7 @@ uses
   unitDM in 'unitDM.pas' {DataModule1: TDataModule},
   cadProdutos in 'cadProdutos.pas' {produtos},
   cadFuncionarios in 'cadFuncionarios.pas' {funcionarios},
-  reqCompra in 'reqCompra.pas' {Form2};
+  reqCompra in 'reqCompra.pas' {cadreqcompra};
 
 {$R *.res}
 
@@ -21,6 +21,6 @@ begin
   Application.CreateForm(TDataModule1, DataModule1);
   Application.CreateForm(Tprodutos, produtos);
   Application.CreateForm(Tfuncionarios, funcionarios);
-  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(Tcadreqcompra, cadreqcompra);
   Application.Run;
 end.

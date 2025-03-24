@@ -6,53 +6,56 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.DBCtrls,
   Vcl.Grids, Vcl.DBGrids, Vcl.Buttons, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
-  Vcl.Mask;
+  Vcl.Mask, Vcl.ComCtrls;
 
 type
-  TForm2 = class(TForm)
+  Tcadreqcompra = class(TForm)
     painelProdutos: TPanel;
-    Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
+    Panel1: TPanel;
+    Panel7: TPanel;
+    Panel13: TPanel;
+    Panel4: TPanel;
     Label1: TLabel;
-    Label27: TLabel;
-    Label24: TLabel;
+    reqcompra: TLabel;
+    Panel5: TPanel;
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
-    nomeP: TDBEdit;
-    estoqueP: TDBEdit;
-    descP: TDBEdit;
-    Panel1: TPanel;
-    Panel5: TPanel;
-    Image4: TImage;
-    SpeedButton7: TSpeedButton;
-    SpeedButton8: TSpeedButton;
-    Panel4: TPanel;
-    Image1: TImage;
-    SpeedButton1: TSpeedButton;
-    SpeedButton6: TSpeedButton;
-    Panel2: TPanel;
-    Image2: TImage;
-    SpeedButton2: TSpeedButton;
-    SpeedButton4: TSpeedButton;
-    Panel3: TPanel;
-    Image3: TImage;
-    SpeedButton3: TSpeedButton;
-    SpeedButton5: TSpeedButton;
+    Label9: TLabel;
+    Shape2: TShape;
+    RadioButton4: TRadioButton;
+    RadioButton5: TRadioButton;
+    RadioButton6: TRadioButton;
     Panel6: TPanel;
-    Label21: TLabel;
-    DBGrid1: TDBGrid;
-    pesquisa: TEdit;
-    Panel7: TPanel;
-    Label22: TLabel;
-    pesqcpf: TRadioButton;
-    pesqfantasia: TRadioButton;
-    unudadeP: TDBLookupComboBox;
-    categoriaP: TDBLookupComboBox;
-    DBEdit1: TDBEdit;
+    Label4: TLabel;
+    Shape3: TShape;
+    Label5: TLabel;
+    DBEdit3: TDBEdit;
     DBComboBox1: TDBComboBox;
+    Panel15: TPanel;
+    Label10: TLabel;
+    Shape4: TShape;
+    Label11: TLabel;
+    DBLookupComboBox3: TDBLookupComboBox;
+    DBLookupComboBox4: TDBLookupComboBox;
+    Label12: TLabel;
+    Label13: TLabel;
+    Panel2: TPanel;
+    Panel16: TPanel;
+    Label14: TLabel;
+    Shape7: TShape;
+    DBEdit2: TDBEdit;
+    Panel17: TPanel;
+    Label16: TLabel;
+    Shape8: TShape;
+    DBMemo2: TDBMemo;
+    DBGrid1: TDBGrid;
+    DBEdit1: TDBEdit;
+    DBEdit4: TDBEdit;
+    Label3: TLabel;
+    DBComboBox3: TDBComboBox;
+    Label2: TLabel;
+    DBNavigator1: TDBNavigator;
   private
     { Private declarations }
   public
@@ -60,7 +63,7 @@ type
   end;
 
 var
-  Form2: TForm2;
+  cadreqcompra: Tcadreqcompra;
 
 implementation
 

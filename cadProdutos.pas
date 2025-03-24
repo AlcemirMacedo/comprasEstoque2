@@ -11,6 +11,12 @@ uses
 type
   Tprodutos = class(TForm)
     painelProdutos: TPanel;
+    Panel6: TPanel;
+    DBGrid1: TDBGrid;
+    Panel7: TPanel;
+    Label21: TLabel;
+    pesquisa: TEdit;
+    Panel8: TPanel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -20,9 +26,14 @@ type
     Label24: TLabel;
     Label6: TLabel;
     Label7: TLabel;
+    Label8: TLabel;
     nomeP: TDBEdit;
     estoqueP: TDBEdit;
     descP: TDBEdit;
+    unudadeP: TDBLookupComboBox;
+    categoriaP: TDBLookupComboBox;
+    DBEdit1: TDBEdit;
+    DBComboBox1: TDBComboBox;
     Panel1: TPanel;
     Panel5: TPanel;
     Image4: TImage;
@@ -40,19 +51,6 @@ type
     Image3: TImage;
     SpeedButton3: TSpeedButton;
     SpeedButton5: TSpeedButton;
-    Panel6: TPanel;
-    Label21: TLabel;
-    DBGrid1: TDBGrid;
-    pesquisa: TEdit;
-    Panel7: TPanel;
-    Label22: TLabel;
-    pesqcpf: TRadioButton;
-    pesqfantasia: TRadioButton;
-    unudadeP: TDBLookupComboBox;
-    categoriaP: TDBLookupComboBox;
-    DBEdit1: TDBEdit;
-    DBComboBox1: TDBComboBox;
-    Label8: TLabel;
     procedure SpeedButton4Click(Sender: TObject);
     procedure SpeedButton5Click(Sender: TObject);
     procedure SpeedButton8Click(Sender: TObject);

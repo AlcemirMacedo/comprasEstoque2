@@ -47,11 +47,6 @@ type
     tbfornecedorfk_cod_banco: TIntegerField;
     tbfornecedoragencia: TStringField;
     tbfornecedornumconta: TStringField;
-    tbfuncionarios: TFDTable;
-    tbfuncionariospessoasID: TFDAutoIncField;
-    tbfuncionariosnome: TStringField;
-    tbfuncionariosfuncao: TStringField;
-    tbfuncionarioscpf: TStringField;
     DSfuncionarios: TDataSource;
     tbprodutoidproduto: TFDAutoIncField;
     tbprodutonome: TStringField;
@@ -69,6 +64,30 @@ type
     tbalmoxarifadoidresponsavelautorizacao: TIntegerField;
     tbalmoxarifadoidresponsaveldespacho: TIntegerField;
     tbalmoxarifadoniveldotacao: TStringField;
+    tbfuncionarios: TFDTable;
+    tbfuncionariosfuncionarioID: TFDAutoIncField;
+    tbfuncionariosnome: TStringField;
+    tbfuncionariosfuncao: TStringField;
+    tbfuncionarioscpf: TStringField;
+    tbrequisicao: TFDTable;
+    tbrequisicaoidreq: TFDAutoIncField;
+    tbrequisicaonumeroreq: TStringField;
+    tbrequisicaodatareq: TDateField;
+    tbrequisicaodataconclusao: TDateField;
+    tbrequisicaoformapgto: TStringField;
+    tbrequisicaolicitacao: TStringField;
+    tbrequisicaodescricao: TStringField;
+    tbrequisicaoobservacao: TMemoField;
+    tbrequisicaoformareq: TStringField;
+    tbrequisicaosituacao: TStringField;
+    tbrequisicaoidAlmoxarifado: TIntegerField;
+    tbrequisicaoidCentrodeconsumo: TIntegerField;
+    DSrequisicao: TDataSource;
+    tbcentroconsumo: TFDTable;
+    tbcentroconsumoid: TFDAutoIncField;
+    tbcentroconsumonome: TStringField;
+    tbcentroconsumoidResponsavel: TIntegerField;
+    DScentroconsumo: TDataSource;
   private
     { Private declarations }
   public

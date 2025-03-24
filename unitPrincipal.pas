@@ -5,8 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.Buttons, VclTee.TeeGDIPlus, VCLTee.TeEngine,
-  VCLTee.TeeProcs, VCLTee.Chart, VCLTee.Series, VCLTee.GanttCh, Vcl.Imaging.jpeg, math;
+  Vcl.Imaging.pngimage, Vcl.Buttons, Vcl.Imaging.jpeg, math;
 
 type
   TForm1 = class(TForm)
@@ -64,6 +63,7 @@ type
     procedure lblFornecedorClick(Sender: TObject);
     procedure funcionariosClick(Sender: TObject);
     procedure Label8Click(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -80,7 +80,7 @@ implementation
 
 {$R *.dfm}
 
-uses cadFornecedor, unitPagInicial, cadProdutos, cadFuncionarios;
+uses cadFornecedor, unitPagInicial, cadProdutos, cadFuncionarios, reqCompra;
 
 procedure TForm1.FormShow(Sender: TObject);
 begin
@@ -134,6 +134,19 @@ end;
 procedure TForm1.Panel5Click(Sender: TObject);
 begin
 Application.Terminate;
+end;
+
+procedure TForm1.SpeedButton4Click(Sender: TObject);
+var
+  i:integer;
+begin
+for i := painelPrincipal.ControlCount - 1 downto 0 do
+        painelPrincipal.Controls[i].Free;
+
+    Application.CreateForm(Tcadreqcompra, cadreqcompra);
+    lblMapa.Caption:=cadreqcompra.Caption;
+    cadreqcompra.Parent := painelPrincipal;
+    cadreqcompra.show;
 end;
 
 procedure TForm1.funcionariosClick(Sender: TObject);

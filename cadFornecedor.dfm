@@ -28,133 +28,8 @@ object fornecedor: Tfornecedor
     Color = 2171668
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 710
-    object Label2: TLabel
-      Left = 20
-      Top = 14
-      Width = 107
-      Height = 19
-      Caption = 'Nome Fantasia'
-      Color = clCream
-      ParentColor = False
-    end
-    object Label3: TLabel
-      Left = 20
-      Top = 134
-      Width = 83
-      Height = 19
-      Caption = 'CPF / CNPJ'
-      Color = clCream
-      ParentColor = False
-    end
-    object Label4: TLabel
-      Left = 19
-      Top = 73
-      Width = 89
-      Height = 19
-      Caption = 'Raz'#227'o Social'
-      Color = clCream
-      ParentColor = False
-    end
-    object Label5: TLabel
-      Left = 220
-      Top = 134
-      Width = 126
-      Height = 19
-      Caption = 'Inscri'#231#227'o Estadual'
-      Color = clCream
-      ParentColor = False
-    end
-    object Label6: TLabel
-      Left = 424
-      Top = 134
-      Width = 135
-      Height = 19
-      Caption = 'Inscri'#231#227'o Municipal'
-      Color = clCream
-      ParentColor = False
-    end
-    object Label7: TLabel
-      Left = 20
-      Top = 258
-      Width = 43
-      Height = 19
-      Caption = 'Bairro'
-      Color = clCream
-      ParentColor = False
-    end
-    object Label8: TLabel
-      Left = 266
-      Top = 258
-      Width = 58
-      Height = 19
-      Caption = 'CIDADE'
-      Color = clCream
-      ParentColor = False
-    end
-    object Label9: TLabel
-      Left = 511
-      Top = 256
-      Width = 20
-      Height = 19
-      Caption = 'UF'
-      Color = clCream
-      ParentColor = False
-    end
-    object Label10: TLabel
-      Left = 20
-      Top = 195
-      Width = 28
-      Height = 19
-      Caption = 'CEP'
-      Color = clCream
-      ParentColor = False
-    end
-    object Label11: TLabel
-      Left = 20
-      Top = 319
-      Width = 45
-      Height = 19
-      Caption = 'E-mail'
-      Color = clCream
-      ParentColor = False
-    end
-    object Label12: TLabel
-      Left = 266
-      Top = 319
-      Width = 142
-      Height = 19
-      Caption = 'Telefone de Contato'
-      Color = clCream
-      ParentColor = False
-    end
-    object Label13: TLabel
-      Left = 426
-      Top = 319
-      Width = 86
-      Height = 19
-      Caption = 'Respons'#225'vel'
-      Color = clCream
-      ParentColor = False
-    end
-    object Label14: TLabel
-      Left = 20
-      Top = 382
-      Width = 24
-      Height = 19
-      Caption = 'Site'
-      Color = clCream
-      ParentColor = False
-    end
-    object Label15: TLabel
-      Left = 133
-      Top = 195
-      Width = 64
-      Height = 19
-      Caption = 'Endere'#231'o'
-      Color = clCream
-      ParentColor = False
-    end
+    ExplicitTop = 8
+    ExplicitHeight = 649
     object Label17: TLabel
       Left = 667
       Top = 145
@@ -171,268 +46,23 @@ object fornecedor: Tfornecedor
       ParentFont = False
       Transparent = False
     end
-    object Label23: TLabel
-      Left = 129
-      Top = 14
-      Width = 5
-      Height = 15
-      Caption = '*'
-      Color = clCream
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clRed
-      Font.Height = -12
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label24: TLabel
-      Left = 446
-      Top = 419
-      Width = 122
-      Height = 15
-      Caption = '* Campos obrigat'#243'rios'
-      Color = clCream
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clRed
-      Font.Height = -12
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label27: TLabel
-      Left = 114
-      Top = 72
-      Width = 5
-      Height = 15
-      Caption = '*'
-      Color = clCream
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clRed
-      Font.Height = -12
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label25: TLabel
-      Left = 105
-      Top = 134
-      Width = 5
-      Height = 15
-      Caption = '*'
-      Color = clCream
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clRed
-      Font.Height = -12
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label26: TLabel
-      Left = 199
-      Top = 195
-      Width = 5
-      Height = 15
-      Caption = '*'
-      Color = clCream
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clRed
-      Font.Height = -12
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label28: TLabel
-      Left = 66
-      Top = 258
-      Width = 5
-      Height = 15
-      Caption = '*'
-      Color = clCream
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clRed
-      Font.Height = -12
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label29: TLabel
-      Left = 328
-      Top = 258
-      Width = 5
-      Height = 15
-      Caption = '*'
-      Color = clCream
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clRed
-      Font.Height = -12
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label30: TLabel
-      Left = 534
-      Top = 258
-      Width = 5
-      Height = 15
-      Caption = '*'
-      Color = clCream
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clRed
-      Font.Height = -12
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label31: TLabel
-      Left = 67
-      Top = 319
-      Width = 5
-      Height = 15
-      Caption = '*'
-      Color = clCream
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clRed
-      Font.Height = -12
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label32: TLabel
-      Left = 410
-      Top = 319
-      Width = 5
-      Height = 15
-      Caption = '*'
-      Color = clCream
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clRed
-      Font.Height = -12
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
-    end
-    object Label33: TLabel
-      Left = 514
-      Top = 319
-      Width = 5
-      Height = 15
-      Caption = '*'
-      Color = clCream
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clRed
-      Font.Height = -12
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
-    end
-    object fantasiaF: TDBEdit
-      Left = 21
-      Top = 39
-      Width = 545
-      Height = 27
-      BevelEdges = []
-      BevelInner = bvNone
-      BevelOuter = bvNone
-      DataField = 'nomefantasia'
-      DataSource = DataModule1.DSfornecedor
-      Font.Charset = ANSI_CHARSET
-      Font.Color = -1
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-    end
-    object cpfcnpjF: TDBEdit
-      Left = 19
-      Top = 159
-      Width = 182
-      Height = 27
-      DataField = 'cnpjcpf'
-      DataSource = DataModule1.DSfornecedor
-      Font.Charset = ANSI_CHARSET
-      Font.Color = -1
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 2
-    end
-    object razaoF: TDBEdit
-      Left = 20
-      Top = 98
-      Width = 547
-      Height = 27
-      DataField = 'razaosocial'
-      DataSource = DataModule1.DSfornecedor
-      Font.Charset = ANSI_CHARSET
-      Font.Color = -1
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 1
-    end
-    object ieF: TDBEdit
-      Left = 220
-      Top = 159
-      Width = 185
-      Height = 27
-      DataField = 'inscestadual'
-      DataSource = DataModule1.DSfornecedor
-      Font.Charset = ANSI_CHARSET
-      Font.Color = -1
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 3
-    end
-    object imF: TDBEdit
-      Left = 424
-      Top = 159
-      Width = 142
-      Height = 27
-      BiDiMode = bdLeftToRight
-      DataField = 'inscmunicipal'
-      DataSource = DataModule1.DSfornecedor
-      Font.Charset = ANSI_CHARSET
-      Font.Color = -1
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentBiDiMode = False
-      ParentFont = False
-      TabOrder = 4
-    end
     object Panel1: TPanel
       AlignWithMargins = True
       Left = 3
-      Top = 732
+      Top = 734
       Width = 1288
-      Height = 74
+      Height = 72
       Margins.Right = 20
       Align = alBottom
       BevelOuter = bvNone
-      TabOrder = 13
-      ExplicitTop = 633
+      TabOrder = 0
+      ExplicitTop = 574
       object Panel5: TPanel
         AlignWithMargins = True
         Left = 107
         Top = 3
         Width = 83
-        Height = 68
+        Height = 66
         Cursor = crHandPoint
         Align = alLeft
         BevelOuter = bvNone
@@ -567,7 +197,7 @@ object fornecedor: Tfornecedor
           Left = 0
           Top = 30
           Width = 83
-          Height = 38
+          Height = 36
           Margins.Left = 0
           Margins.Top = 30
           Margins.Right = 0
@@ -589,7 +219,7 @@ object fornecedor: Tfornecedor
           Left = 0
           Top = 0
           Width = 83
-          Height = 68
+          Height = 66
           Align = alClient
           Flat = True
           OnClick = SpeedButton8Click
@@ -604,7 +234,7 @@ object fornecedor: Tfornecedor
         Left = 285
         Top = 3
         Width = 83
-        Height = 68
+        Height = 66
         Cursor = crHandPoint
         Align = alLeft
         BevelOuter = bvNone
@@ -745,7 +375,7 @@ object fornecedor: Tfornecedor
           Left = 0
           Top = 30
           Width = 83
-          Height = 38
+          Height = 36
           Margins.Left = 0
           Margins.Top = 30
           Margins.Right = 0
@@ -767,12 +397,13 @@ object fornecedor: Tfornecedor
           Left = 0
           Top = 0
           Width = 83
-          Height = 68
+          Height = 66
           Align = alClient
           Flat = True
           OnClick = SpeedButton6Click
           ExplicitLeft = -3
           ExplicitTop = -3
+          ExplicitHeight = 68
         end
       end
       object Panel2: TPanel
@@ -780,7 +411,7 @@ object fornecedor: Tfornecedor
         Left = 196
         Top = 3
         Width = 83
-        Height = 68
+        Height = 66
         Cursor = crHandPoint
         Align = alLeft
         BevelOuter = bvNone
@@ -903,7 +534,7 @@ object fornecedor: Tfornecedor
           Left = 0
           Top = 30
           Width = 83
-          Height = 38
+          Height = 36
           Margins.Left = 0
           Margins.Top = 30
           Margins.Right = 0
@@ -926,7 +557,7 @@ object fornecedor: Tfornecedor
           Left = 0
           Top = 0
           Width = 83
-          Height = 68
+          Height = 66
           Align = alClient
           Flat = True
           OnClick = SpeedButton4Click
@@ -940,7 +571,7 @@ object fornecedor: Tfornecedor
         Left = 18
         Top = 3
         Width = 83
-        Height = 68
+        Height = 66
         Cursor = crHandPoint
         Margins.Left = 18
         Align = alLeft
@@ -1061,7 +692,7 @@ object fornecedor: Tfornecedor
           Left = 0
           Top = 30
           Width = 83
-          Height = 38
+          Height = 36
           Margins.Left = 0
           Margins.Top = 30
           Margins.Right = 0
@@ -1084,7 +715,7 @@ object fornecedor: Tfornecedor
           Left = 0
           Top = 0
           Width = 83
-          Height = 68
+          Height = 66
           Align = alClient
           Flat = True
           OnClick = SpeedButton5Click
@@ -1095,233 +726,18 @@ object fornecedor: Tfornecedor
         end
       end
     end
-    object bairroF: TDBEdit
-      Left = 20
-      Top = 281
-      Width = 229
-      Height = 27
-      Color = 15263976
-      DataField = 'bairro'
-      DataSource = DataModule1.DSfornecedor
-      Font.Charset = ANSI_CHARSET
-      Font.Color = -1
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 6
-    end
-    object cepF: TDBEdit
-      Left = 20
-      Top = 220
-      Width = 93
-      Height = 27
-      Color = 15263976
-      DataField = 'cep'
-      DataSource = DataModule1.DSfornecedor
-      Font.Charset = ANSI_CHARSET
-      Font.Color = -1
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 5
-      OnExit = cepFExit
-    end
-    object ufF: TDBEdit
-      Left = 511
-      Top = 281
-      Width = 56
-      Height = 27
-      Color = 15263976
-      DataField = 'uf'
-      DataSource = DataModule1.DSfornecedor
-      Font.Charset = ANSI_CHARSET
-      Font.Color = -1
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 8
-    end
-    object cidadeF: TDBEdit
-      Left = 266
-      Top = 281
-      Width = 229
-      Height = 27
-      Color = 15263976
-      DataField = 'cidade'
-      DataSource = DataModule1.DSfornecedor
-      Font.Charset = ANSI_CHARSET
-      Font.Color = -1
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 7
-    end
-    object emailF: TDBEdit
-      Left = 20
-      Top = 344
-      Width = 229
-      Height = 27
-      Color = 15263976
-      DataField = 'email'
-      DataSource = DataModule1.DSfornecedor
-      Font.Charset = ANSI_CHARSET
-      Font.Color = -1
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 9
-    end
-    object teleF: TDBEdit
-      Left = 266
-      Top = 344
-      Width = 144
-      Height = 27
-      Color = 15263976
-      DataField = 'telcontato'
-      DataSource = DataModule1.DSfornecedor
-      Font.Charset = ANSI_CHARSET
-      Font.Color = -1
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 10
-    end
-    object nomerespF: TDBEdit
-      Left = 426
-      Top = 344
-      Width = 141
-      Height = 27
-      Color = 15263976
-      DataField = 'nomecontato'
-      DataSource = DataModule1.DSfornecedor
-      Font.Charset = ANSI_CHARSET
-      Font.Color = -1
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 11
-    end
-    object siteF: TDBEdit
-      Left = 20
-      Top = 407
-      Width = 388
-      Height = 27
-      Color = 15263976
-      DataField = 'site'
-      DataSource = DataModule1.DSfornecedor
-      Font.Charset = ANSI_CHARSET
-      Font.Color = -1
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 12
-    end
-    object GroupBox1: TGroupBox
-      Left = 21
-      Top = 450
-      Width = 546
-      Height = 183
-      Caption = 'GroupBox1'
-      TabOrder = 14
-      object Label16: TLabel
-        Left = 8
-        Top = 0
-        Width = 125
-        Height = 19
-        Caption = 'Dados Banc'#225'rios'
-        Transparent = False
-      end
-      object Label18: TLabel
-        Left = 22
-        Top = 36
-        Width = 43
-        Height = 19
-        Caption = 'Banco'
-      end
-      object Label19: TLabel
-        Left = 22
-        Top = 98
-        Width = 43
-        Height = 19
-        Caption = 'Conta'
-      end
-      object Label20: TLabel
-        Left = 187
-        Top = 98
-        Width = 56
-        Height = 19
-        Caption = 'Ag'#234'ncia'
-      end
-      object DBLookupComboBox1: TDBLookupComboBox
-        Left = 22
-        Top = 61
-        Width = 291
-        Height = 27
-        DataField = 'fk_cod_banco'
-        DataSource = DataModule1.DSfornecedor
-        Font.Charset = ANSI_CHARSET
-        Font.Color = -1
-        Font.Height = -16
-        Font.Name = 'Futura Bk BT'
-        Font.Style = []
-        KeyField = 'cod'
-        ListField = 'banco'
-        ListSource = DataModule1.DSbancos
-        ParentFont = False
-        TabOrder = 0
-      end
-      object DBEdit2: TDBEdit
-        Left = 24
-        Top = 123
-        Width = 145
-        Height = 27
-        DataField = 'numconta'
-        DataSource = DataModule1.DSfornecedor
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clBlack
-        Font.Height = -16
-        Font.Name = 'Futura Bk BT'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 1
-      end
-      object DBEdit3: TDBEdit
-        Left = 189
-        Top = 123
-        Width = 124
-        Height = 27
-        DataField = 'agencia'
-        DataSource = DataModule1.DSfornecedor
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clBlack
-        Font.Height = -16
-        Font.Name = 'Futura Bk BT'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 2
-      end
-    end
     object Panel6: TPanel
-      Left = 608
+      Left = 656
       Top = 0
-      Width = 703
-      Height = 729
+      Width = 655
+      Height = 731
       Align = alRight
       BevelOuter = bvNone
-      Caption = 'Panel6'
-      TabOrder = 15
-      ExplicitHeight = 630
+      TabOrder = 1
+      ExplicitHeight = 571
       object Label21: TLabel
-        Left = 344
-        Top = 39
+        Left = 416
+        Top = 75
         Width = 67
         Height = 19
         Caption = 'Pesquisar'
@@ -1334,94 +750,10 @@ object fornecedor: Tfornecedor
         ParentColor = False
         ParentFont = False
       end
-      object DBGrid1: TDBGrid
-        AlignWithMargins = True
-        Left = 10
-        Top = 98
-        Width = 683
-        Height = 628
-        Margins.Left = 10
-        Margins.Top = 98
-        Margins.Right = 10
-        Align = alClient
-        BorderStyle = bsNone
-        Color = 2171668
-        DataSource = DataModule1.DSfornecedor
-        FixedColor = clWhite
-        GradientEndColor = 33023
-        GradientStartColor = 2171668
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWhite
-        Font.Height = -16
-        Font.Name = 'Futura Bk BT'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        TitleFont.Charset = ANSI_CHARSET
-        TitleFont.Color = -1
-        TitleFont.Height = -16
-        TitleFont.Name = 'Futura Bk BT'
-        TitleFont.Style = [fsBold]
-        OnDrawColumnCell = DBGrid1DrawColumnCell
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'nomefantasia'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = -1
-            Font.Height = -12
-            Font.Name = 'Futura Bk BT'
-            Font.Style = []
-            Title.Caption = 'Nome Fantasia'
-            Title.Color = -1
-            Title.Font.Charset = ANSI_CHARSET
-            Title.Font.Color = -1
-            Title.Font.Height = -13
-            Title.Font.Name = 'Futura Bk BT'
-            Title.Font.Style = [fsBold]
-            Width = 195
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'cnpjcpf'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = -1
-            Font.Height = -12
-            Font.Name = 'Futura Bk BT'
-            Font.Style = []
-            Title.Caption = 'CPF / CNPJ'
-            Title.Color = -1
-            Title.Font.Charset = ANSI_CHARSET
-            Title.Font.Color = -1
-            Title.Font.Height = -13
-            Title.Font.Name = 'Futura Bk BT'
-            Title.Font.Style = [fsBold]
-            Width = 168
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'razaosocial'
-            Font.Charset = ANSI_CHARSET
-            Font.Color = -1
-            Font.Height = -16
-            Font.Name = 'Futura Bk BT'
-            Font.Style = []
-            Title.Caption = 'Raz'#227'o Social'
-            Title.Font.Charset = ANSI_CHARSET
-            Title.Font.Color = -1
-            Title.Font.Height = -13
-            Title.Font.Name = 'Futura Bk BT'
-            Title.Font.Style = [fsBold]
-            Width = 258
-            Visible = True
-          end>
-      end
       object pesquisa: TEdit
-        Left = 344
-        Top = 63
-        Width = 349
+        Left = 416
+        Top = 100
+        Width = 209
         Height = 27
         Font.Charset = ANSI_CHARSET
         Font.Color = -1
@@ -1429,20 +761,20 @@ object fornecedor: Tfornecedor
         Font.Name = 'Futura Bk BT'
         Font.Style = []
         ParentFont = False
-        TabOrder = 1
+        TabOrder = 0
         OnChange = pesquisaChange
       end
-      object Panel7: TPanel
-        Left = 10
-        Top = 37
-        Width = 295
-        Height = 53
+      object Panel9: TPanel
+        Left = 8
+        Top = 63
+        Width = 305
+        Height = 64
         BevelOuter = bvNone
         Color = clWhite
         ParentBackground = False
-        TabOrder = 2
+        TabOrder = 1
         object Label22: TLabel
-          Left = 12
+          Left = 28
           Top = 5
           Width = 101
           Height = 19
@@ -1457,7 +789,7 @@ object fornecedor: Tfornecedor
           ParentFont = False
         end
         object pesqcpf: TRadioButton
-          Left = 12
+          Left = 28
           Top = 29
           Width = 113
           Height = 17
@@ -1475,7 +807,7 @@ object fornecedor: Tfornecedor
           TabStop = True
         end
         object pesqfantasia: TRadioButton
-          Left = 155
+          Left = 171
           Top = 29
           Width = 127
           Height = 17
@@ -1491,19 +823,687 @@ object fornecedor: Tfornecedor
           TabOrder = 1
         end
       end
+      object DBGrid1: TDBGrid
+        Left = 8
+        Top = 157
+        Width = 617
+        Height = 308
+        DataSource = DataModule1.DSfornecedor
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -13
+        Font.Name = 'Futura Bk BT'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 2
+        TitleFont.Charset = ANSI_CHARSET
+        TitleFont.Color = clWhite
+        TitleFont.Height = -16
+        TitleFont.Name = 'Futura Bk BT'
+        TitleFont.Style = []
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'nomefantasia'
+            Title.Caption = 'Nome Fantasia'
+            Title.Font.Charset = ANSI_CHARSET
+            Title.Font.Color = -1
+            Title.Font.Height = -13
+            Title.Font.Name = 'Futura Bk BT'
+            Title.Font.Style = [fsBold]
+            Width = 180
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'razaosocial'
+            Title.Caption = 'Raz'#227'o Social'
+            Title.Font.Charset = ANSI_CHARSET
+            Title.Font.Color = -1
+            Title.Font.Height = -13
+            Title.Font.Name = 'Futura Bk BT'
+            Title.Font.Style = [fsBold]
+            Width = 180
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'cnpjcpf'
+            Title.Caption = 'CPF / CNPJ'
+            Title.Color = clWhite
+            Title.Font.Charset = ANSI_CHARSET
+            Title.Font.Color = -1
+            Title.Font.Height = -13
+            Title.Font.Name = 'Futura Bk BT'
+            Title.Font.Style = [fsBold]
+            Visible = True
+          end>
+      end
     end
-    object Edit1: TEdit
-      Left = 129
-      Top = 220
-      Width = 437
-      Height = 27
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clBlack
-      Font.Height = -16
-      Font.Name = 'Futura Bk BT'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 16
+    object Panel8: TPanel
+      Left = 0
+      Top = 0
+      Width = 489
+      Height = 731
+      Align = alLeft
+      BevelOuter = bvNone
+      TabOrder = 2
+      ExplicitHeight = 571
+      object Label2: TLabel
+        Left = 20
+        Top = 14
+        Width = 107
+        Height = 19
+        Caption = 'Nome Fantasia'
+        Color = clCream
+        ParentColor = False
+      end
+      object Label3: TLabel
+        Left = 20
+        Top = 75
+        Width = 83
+        Height = 19
+        Caption = 'CPF / CNPJ'
+        Color = clCream
+        ParentColor = False
+      end
+      object Label4: TLabel
+        Left = 273
+        Top = 14
+        Width = 89
+        Height = 19
+        Caption = 'Raz'#227'o Social'
+        Color = clCream
+        ParentColor = False
+      end
+      object Label5: TLabel
+        Left = 168
+        Top = 75
+        Width = 126
+        Height = 19
+        Caption = 'Inscri'#231#227'o Estadual'
+        Color = clCream
+        ParentColor = False
+      end
+      object Label6: TLabel
+        Left = 320
+        Top = 75
+        Width = 135
+        Height = 19
+        Caption = 'Inscri'#231#227'o Municipal'
+        Color = clCream
+        ParentColor = False
+      end
+      object Label7: TLabel
+        Left = 20
+        Top = 189
+        Width = 43
+        Height = 19
+        Caption = 'Bairro'
+        Color = clCream
+        ParentColor = False
+      end
+      object Label8: TLabel
+        Left = 214
+        Top = 189
+        Width = 58
+        Height = 19
+        Caption = 'CIDADE'
+        Color = clCream
+        ParentColor = False
+      end
+      object Label9: TLabel
+        Left = 409
+        Top = 187
+        Width = 20
+        Height = 19
+        Caption = 'UF'
+        Color = clCream
+        ParentColor = False
+      end
+      object Label10: TLabel
+        Left = 20
+        Top = 132
+        Width = 28
+        Height = 19
+        Caption = 'CEP'
+        Color = clCream
+        ParentColor = False
+      end
+      object Label11: TLabel
+        Left = 20
+        Top = 246
+        Width = 45
+        Height = 19
+        Caption = 'E-mail'
+        Color = clCream
+        ParentColor = False
+      end
+      object Label12: TLabel
+        Left = 266
+        Top = 246
+        Width = 142
+        Height = 19
+        Caption = 'Telefone de Contato'
+        Color = clCream
+        ParentColor = False
+      end
+      object Label13: TLabel
+        Left = 19
+        Top = 301
+        Width = 86
+        Height = 19
+        Caption = 'Respons'#225'vel'
+        Color = clCream
+        ParentColor = False
+      end
+      object Label14: TLabel
+        Left = 183
+        Top = 301
+        Width = 24
+        Height = 19
+        Caption = 'Site'
+        Color = clCream
+        ParentColor = False
+      end
+      object Label15: TLabel
+        Left = 133
+        Top = 132
+        Width = 64
+        Height = 19
+        Caption = 'Endere'#231'o'
+        Color = clCream
+        ParentColor = False
+      end
+      object Label23: TLabel
+        Left = 129
+        Top = 14
+        Width = 5
+        Height = 15
+        Caption = '*'
+        Color = clCream
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label27: TLabel
+        Left = 368
+        Top = 13
+        Width = 5
+        Height = 15
+        Caption = '*'
+        Color = clCream
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label25: TLabel
+        Left = 105
+        Top = 75
+        Width = 5
+        Height = 15
+        Caption = '*'
+        Color = clCream
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label26: TLabel
+        Left = 199
+        Top = 132
+        Width = 5
+        Height = 15
+        Caption = '*'
+        Color = clCream
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label28: TLabel
+        Left = 66
+        Top = 189
+        Width = 5
+        Height = 15
+        Caption = '*'
+        Color = clCream
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label29: TLabel
+        Left = 277
+        Top = 189
+        Width = 5
+        Height = 15
+        Caption = '*'
+        Color = clCream
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label30: TLabel
+        Left = 432
+        Top = 189
+        Width = 5
+        Height = 15
+        Caption = '*'
+        Color = clCream
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label31: TLabel
+        Left = 67
+        Top = 246
+        Width = 5
+        Height = 15
+        Caption = '*'
+        Color = clCream
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label32: TLabel
+        Left = 410
+        Top = 246
+        Width = 5
+        Height = 15
+        Caption = '*'
+        Color = clCream
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label33: TLabel
+        Left = 107
+        Top = 301
+        Width = 5
+        Height = 15
+        Caption = '*'
+        Color = clCream
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label24: TLabel
+        Left = 19
+        Top = 471
+        Width = 122
+        Height = 15
+        Caption = '* Campos obrigat'#243'rios'
+        Color = clCream
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label1: TLabel
+        Left = 52
+        Top = 132
+        Width = 5
+        Height = 15
+        Caption = '*'
+        Color = clCream
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+      end
+      object fantasiaF: TDBEdit
+        Left = 22
+        Top = 39
+        Width = 240
+        Height = 27
+        BevelEdges = []
+        BevelInner = bvNone
+        BevelOuter = bvNone
+        DataField = 'nomefantasia'
+        DataSource = DataModule1.DSfornecedor
+        Font.Charset = ANSI_CHARSET
+        Font.Color = -1
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+      end
+      object cpfcnpjF: TDBEdit
+        Left = 19
+        Top = 100
+        Width = 134
+        Height = 27
+        DataField = 'cnpjcpf'
+        DataSource = DataModule1.DSfornecedor
+        Font.Charset = ANSI_CHARSET
+        Font.Color = -1
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
+      end
+      object razaoF: TDBEdit
+        Left = 274
+        Top = 39
+        Width = 181
+        Height = 27
+        DataField = 'razaosocial'
+        DataSource = DataModule1.DSfornecedor
+        Font.Charset = ANSI_CHARSET
+        Font.Color = -1
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 2
+      end
+      object ieF: TDBEdit
+        Left = 168
+        Top = 100
+        Width = 137
+        Height = 27
+        DataField = 'inscestadual'
+        DataSource = DataModule1.DSfornecedor
+        Font.Charset = ANSI_CHARSET
+        Font.Color = -1
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 3
+      end
+      object imF: TDBEdit
+        Left = 320
+        Top = 100
+        Width = 135
+        Height = 27
+        BiDiMode = bdLeftToRight
+        DataField = 'inscmunicipal'
+        DataSource = DataModule1.DSfornecedor
+        Font.Charset = ANSI_CHARSET
+        Font.Color = -1
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentBiDiMode = False
+        ParentFont = False
+        TabOrder = 4
+      end
+      object bairroF: TDBEdit
+        Left = 20
+        Top = 212
+        Width = 181
+        Height = 27
+        Color = 15263976
+        DataField = 'bairro'
+        DataSource = DataModule1.DSfornecedor
+        Font.Charset = ANSI_CHARSET
+        Font.Color = -1
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 5
+      end
+      object cepF: TDBEdit
+        Left = 20
+        Top = 157
+        Width = 93
+        Height = 27
+        Color = 15263976
+        DataField = 'cep'
+        DataSource = DataModule1.DSfornecedor
+        Font.Charset = ANSI_CHARSET
+        Font.Color = -1
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 6
+        OnExit = cepFExit
+      end
+      object ufF: TDBEdit
+        Left = 407
+        Top = 212
+        Width = 48
+        Height = 27
+        Color = 15263976
+        DataField = 'uf'
+        DataSource = DataModule1.DSfornecedor
+        Font.Charset = ANSI_CHARSET
+        Font.Color = -1
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 7
+      end
+      object cidadeF: TDBEdit
+        Left = 214
+        Top = 212
+        Width = 181
+        Height = 27
+        Color = 15263976
+        DataField = 'cidade'
+        DataSource = DataModule1.DSfornecedor
+        Font.Charset = ANSI_CHARSET
+        Font.Color = -1
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 8
+      end
+      object emailF: TDBEdit
+        Left = 20
+        Top = 271
+        Width = 229
+        Height = 27
+        Color = 15263976
+        DataField = 'email'
+        DataSource = DataModule1.DSfornecedor
+        Font.Charset = ANSI_CHARSET
+        Font.Color = -1
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 9
+      end
+      object teleF: TDBEdit
+        Left = 266
+        Top = 271
+        Width = 189
+        Height = 27
+        Color = 15263976
+        DataField = 'telcontato'
+        DataSource = DataModule1.DSfornecedor
+        Font.Charset = ANSI_CHARSET
+        Font.Color = -1
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 10
+      end
+      object nomerespF: TDBEdit
+        Left = 19
+        Top = 326
+        Width = 154
+        Height = 27
+        Color = 15263976
+        DataField = 'nomecontato'
+        DataSource = DataModule1.DSfornecedor
+        Font.Charset = ANSI_CHARSET
+        Font.Color = -1
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 11
+      end
+      object siteF: TDBEdit
+        Left = 183
+        Top = 326
+        Width = 274
+        Height = 27
+        Color = 15263976
+        DataField = 'site'
+        DataSource = DataModule1.DSfornecedor
+        Font.Charset = ANSI_CHARSET
+        Font.Color = -1
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 12
+      end
+      object GroupBox1: TGroupBox
+        Left = 19
+        Top = 361
+        Width = 438
+        Height = 104
+        Caption = 'GroupBox1'
+        TabOrder = 13
+        object Label16: TLabel
+          Left = 8
+          Top = 0
+          Width = 120
+          Height = 19
+          Caption = 'Dados Banc'#225'rios'
+          Color = 2171668
+          ParentColor = False
+          Transparent = False
+        end
+        object Label18: TLabel
+          Left = 22
+          Top = 22
+          Width = 43
+          Height = 19
+          Caption = 'Banco'
+        end
+        object Label19: TLabel
+          Left = 238
+          Top = 22
+          Width = 43
+          Height = 19
+          Caption = 'Conta'
+        end
+        object Label20: TLabel
+          Left = 362
+          Top = 22
+          Width = 56
+          Height = 19
+          Caption = 'Ag'#234'ncia'
+        end
+        object DBLookupComboBox1: TDBLookupComboBox
+          Left = 22
+          Top = 47
+          Width = 206
+          Height = 27
+          DataField = 'fk_cod_banco'
+          DataSource = DataModule1.DSfornecedor
+          Font.Charset = ANSI_CHARSET
+          Font.Color = -1
+          Font.Height = -16
+          Font.Name = 'Futura Bk BT'
+          Font.Style = []
+          KeyField = 'cod'
+          ListField = 'banco'
+          ListSource = DataModule1.DSbancos
+          ParentFont = False
+          TabOrder = 0
+        end
+        object DBEdit2: TDBEdit
+          Left = 240
+          Top = 47
+          Width = 110
+          Height = 27
+          DataField = 'numconta'
+          DataSource = DataModule1.DSfornecedor
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Futura Bk BT'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 1
+        end
+        object DBEdit3: TDBEdit
+          Left = 364
+          Top = 47
+          Width = 66
+          Height = 27
+          DataField = 'agencia'
+          DataSource = DataModule1.DSfornecedor
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Futura Bk BT'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 2
+        end
+      end
+      object Edit1: TEdit
+        Left = 129
+        Top = 157
+        Width = 326
+        Height = 27
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 14
+      end
     end
   end
 end

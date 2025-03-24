@@ -1,7 +1,7 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
   Height = 494
-  Width = 760
+  Width = 832
   object conexao: TFDConnection
     Params.Strings = (
       'Database=comprasestoque'
@@ -272,42 +272,8 @@ object DataModule1: TDataModule1
     Left = 496
     Top = 144
   end
-  object tbfuncionarios: TFDTable
-    Active = True
-    IndexFieldNames = 'pessoasID'
-    DetailFields = 'cpf;funcao;nome;pessoasID'
-    Connection = conexao
-    TableName = 'comprasestoque.funcionarios'
-    Left = 586
-    Top = 86
-    object tbfuncionariospessoasID: TFDAutoIncField
-      FieldName = 'pessoasID'
-      Origin = 'pessoasID'
-      ProviderFlags = [pfInWhere, pfInKey]
-      ReadOnly = True
-    end
-    object tbfuncionariosnome: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'nome'
-      Origin = 'nome'
-      Size = 100
-    end
-    object tbfuncionariosfuncao: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'funcao'
-      Origin = 'funcao'
-      Size = 100
-    end
-    object tbfuncionarioscpf: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'cpf'
-      Origin = 'cpf'
-      EditMask = '###.###.###-##;1;_'
-    end
-  end
   object DSfuncionarios: TDataSource
     AutoEdit = False
-    DataSet = tbfuncionarios
     Left = 589
     Top = 144
   end
@@ -351,5 +317,143 @@ object DataModule1: TDataModule1
     DataSet = tbalmoxarifado
     Left = 168
     Top = 336
+  end
+  object tbfuncionarios: TFDTable
+    Active = True
+    IndexFieldNames = 'funcionarioID'
+    Connection = conexao
+    TableName = 'comprasestoque.funcionarios'
+    Left = 584
+    Top = 88
+    object tbfuncionariosfuncionarioID: TFDAutoIncField
+      FieldName = 'funcionarioID'
+      Origin = 'funcionarioID'
+    end
+    object tbfuncionariosnome: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'nome'
+      Origin = 'nome'
+      Size = 100
+    end
+    object tbfuncionariosfuncao: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'funcao'
+      Origin = 'funcao'
+      Size = 100
+    end
+    object tbfuncionarioscpf: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'cpf'
+      Origin = 'cpf'
+    end
+  end
+  object tbrequisicao: TFDTable
+    Active = True
+    IndexFieldNames = 'idreq'
+    Connection = conexao
+    TableName = 'comprasestoque.requisicao'
+    Left = 680
+    Top = 88
+    object tbrequisicaoidreq: TFDAutoIncField
+      FieldName = 'idreq'
+      Origin = 'idreq'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object tbrequisicaonumeroreq: TStringField
+      FieldName = 'numeroreq'
+      Origin = 'numeroreq'
+      Size = 10
+    end
+    object tbrequisicaodatareq: TDateField
+      FieldName = 'datareq'
+      Origin = 'datareq'
+      Required = True
+      EditMask = '##/##/####;1;_'
+    end
+    object tbrequisicaodataconclusao: TDateField
+      AutoGenerateValue = arDefault
+      FieldName = 'dataconclusao'
+      Origin = 'dataconclusao'
+      EditMask = '##/##/####;1;_'
+    end
+    object tbrequisicaoformapgto: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'formapgto'
+      Origin = 'formapgto'
+      Size = 10
+    end
+    object tbrequisicaolicitacao: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'licitacao'
+      Origin = 'licitacao'
+      Size = 10
+    end
+    object tbrequisicaodescricao: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'descricao'
+      Origin = 'descricao'
+      Size = 80
+    end
+    object tbrequisicaoobservacao: TMemoField
+      AutoGenerateValue = arDefault
+      FieldName = 'observacao'
+      Origin = 'observacao'
+      BlobType = ftMemo
+    end
+    object tbrequisicaoformareq: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'formareq'
+      Origin = 'formareq'
+    end
+    object tbrequisicaosituacao: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'situacao'
+      Origin = 'situacao'
+    end
+    object tbrequisicaoidAlmoxarifado: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'idAlmoxarifado'
+      Origin = 'idAlmoxarifado'
+    end
+    object tbrequisicaoidCentrodeconsumo: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'idCentrodeconsumo'
+      Origin = 'idCentrodeconsumo'
+    end
+  end
+  object DSrequisicao: TDataSource
+    AutoEdit = False
+    DataSet = tbrequisicao
+    Left = 680
+    Top = 144
+  end
+  object tbcentroconsumo: TFDTable
+    Active = True
+    IndexFieldNames = 'id'
+    Connection = conexao
+    TableName = 'comprasestoque.centrodeconsumo'
+    Left = 336
+    Top = 224
+    object tbcentroconsumoid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object tbcentroconsumonome: TStringField
+      FieldName = 'nome'
+      Origin = 'nome'
+      Required = True
+      Size = 80
+    end
+    object tbcentroconsumoidResponsavel: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'idResponsavel'
+      Origin = 'idResponsavel'
+    end
+  end
+  object DScentroconsumo: TDataSource
+    DataSet = tbcentroconsumo
+    Left = 336
+    Top = 288
   end
 end

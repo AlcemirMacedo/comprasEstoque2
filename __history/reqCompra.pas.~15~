@@ -1,0 +1,83 @@
+unit reqCompra;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.DBCtrls,
+  Vcl.Grids, Vcl.DBGrids, Vcl.Buttons, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
+  Vcl.Mask, Vcl.ComCtrls;
+
+type
+  Tcadreqcompra = class(TForm)
+    painelProdutos: TPanel;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Label2: TLabel;
+    Panel3: TPanel;
+    Label1: TLabel;
+    reqcompra: TLabel;
+    DateTimePicker1: TDateTimePicker;
+    Shape1: TShape;
+    Panel4: TPanel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Shape2: TShape;
+    RadioButton4: TRadioButton;
+    RadioButton5: TRadioButton;
+    RadioButton6: TRadioButton;
+    Panel5: TPanel;
+    Label4: TLabel;
+    Shape3: TShape;
+    Label5: TLabel;
+    DBEdit3: TDBEdit;
+    DBLookupComboBox1: TDBLookupComboBox;
+    DateTimePicker2: TDateTimePicker;
+    DBComboBox1: TDBComboBox;
+    Panel6: TPanel;
+    Label10: TLabel;
+    Shape4: TShape;
+    Label11: TLabel;
+    DBLookupComboBox3: TDBLookupComboBox;
+    DBLookupComboBox4: TDBLookupComboBox;
+    Panel7: TPanel;
+    Panel8: TPanel;
+    Panel9: TPanel;
+    Image4: TImage;
+    SpeedButton7: TSpeedButton;
+    SpeedButton8: TSpeedButton;
+    Panel10: TPanel;
+    Image1: TImage;
+    SpeedButton1: TSpeedButton;
+    SpeedButton6: TSpeedButton;
+    Panel11: TPanel;
+    Image2: TImage;
+    SpeedButton2: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    Panel12: TPanel;
+    Image3: TImage;
+    SpeedButton3: TSpeedButton;
+    SpeedButton5: TSpeedButton;
+    Panel13: TPanel;
+    Panel14: TPanel;
+    Panel15: TPanel;
+    DBGrid1: TDBGrid;
+    Panel16: TPanel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  cadreqcompra: Tcadreqcompra;
+
+implementation
+
+{$R *.dfm}
+
+uses unitDM;
+
+end.

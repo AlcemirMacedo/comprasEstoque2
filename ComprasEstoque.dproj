@@ -124,7 +124,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="reqCompra.pas">
-            <Form>Form2</Form>
+            <Form>cadreqcompra</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
