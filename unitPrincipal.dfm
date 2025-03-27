@@ -547,7 +547,8 @@ object Form1: TForm1
         Font.Style = []
         ParentFont = False
         Layout = tlCenter
-        ExplicitHeight = 15
+        ExplicitLeft = 13
+        ExplicitTop = 0
       end
     end
     object painelPrincipal: TPanel
@@ -865,7 +866,7 @@ object Form1: TForm1
         AlignWithMargins = True
         Left = 20
         Top = 3
-        Width = 82
+        Width = 83
         Height = 34
         Cursor = crHandPoint
         Margins.Left = 20
@@ -1183,7 +1184,7 @@ object Form1: TForm1
           Align = alClient
           Caption = 'Entrada de Produto'
           Layout = tlCenter
-          ExplicitWidth = 122
+          ExplicitWidth = 124
           ExplicitHeight = 19
         end
         object SpeedButton2: TSpeedButton
@@ -1376,7 +1377,7 @@ object Form1: TForm1
           Align = alClient
           Caption = 'Requisi'#231#227'o de Sa'#237'da'
           Layout = tlCenter
-          ExplicitWidth = 127
+          ExplicitWidth = 130
           ExplicitHeight = 19
         end
         object SpeedButton3: TSpeedButton
@@ -1549,7 +1550,7 @@ object Form1: TForm1
           Align = alClient
           Caption = 'Requisi'#231#227'o de compra'
           Layout = tlCenter
-          ExplicitWidth = 139
+          ExplicitWidth = 141
           ExplicitHeight = 19
         end
         object SpeedButton4: TSpeedButton
@@ -1582,7 +1583,7 @@ object Form1: TForm1
         AlignWithMargins = True
         Left = 20
         Top = 3
-        Width = 85
+        Width = 88
         Height = 34
         Cursor = crHandPoint
         Margins.Left = 20

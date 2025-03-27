@@ -1,0 +1,45 @@
+unit uRelatorioRequisicao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, RLReport, Vcl.ExtCtrls, Vcl.DBCtrls,
+  Data.DB, Vcl.Grids, Vcl.DBGrids, RLRichText, RLFilters, RLHTMLFilter;
+
+type
+  TfrmRelatorio = class(TForm)
+    RLReport1: TRLReport;
+    RLGroup1: TRLGroup;
+    RLDraw1: TRLDraw;
+    RLLabel1: TRLLabel;
+    RLDBText1: TRLDBText;
+    RLLabel2: TRLLabel;
+    RLBand1: TRLBand;
+    RLDraw2: TRLDraw;
+    RLDBText2: TRLDBText;
+    RLLabel3: TRLLabel;
+    RLLabel4: TRLLabel;
+    RLDBText3: TRLDBText;
+    RLLabel5: TRLLabel;
+    RLDBText5: TRLDBText;
+    RLLabel6: TRLLabel;
+    RLDBText4: TRLDBText;
+    RLBand2: TRLBand;
+    RLBand3: TRLBand;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmRelatorio: TfrmRelatorio;
+
+implementation
+
+{$R *.dfm}
+
+uses unitDM;
+
+end.

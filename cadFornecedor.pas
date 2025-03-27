@@ -198,7 +198,6 @@ procedure Tfornecedor.SpeedButton4Click(Sender: TObject);
 begin
 
   try
-
     //Verifica se os campos obrigatórios foram preenchidos
     if Trim(DataModule1.tbfornecedor.FieldByName('nomefantasia').AsString) = '' then
     begin
@@ -229,7 +228,6 @@ begin
       Exit;
     end;
 
-
     if Trim(DataModule1.tbfornecedor.FieldByName('cidade').AsString) = '' then
     begin
       ShowMessage('Campo Cidade é obrigatório!');
@@ -256,19 +254,19 @@ begin
 
     // inicia a ação para salvar as alterações
     if DataModule1.tbfornecedor.State in [dsEdit, dsInsert] then
-    begin
-      DataModule1.tbfornecedor.FieldByName('endereco').AsString := Edit1.Text;
-      DataModule1.tbfornecedor.Post; // Salva as alterações
-      ShowMessage('Alterações salvas com sucesso!');
-    end
+      begin
+        DataModule1.tbfornecedor.FieldByName('endereco').AsString := Edit1.Text;
+        DataModule1.tbfornecedor.Post; // Salva as alterações
+        ShowMessage('Alterações salvas com sucesso!');
+      end
     else
       ShowMessage('Nenhum registro está em modo de edição ou inserção.');
-  except
-    on E: Exception do
-    begin
-      ShowMessage('Erro ao salvar alterações: ' + E.Message);
-      DataModule1.tbfornecedor.Cancel; // Cancela as alterações caso ocorra erro
-    end;
+    except
+      on E: Exception do
+        begin
+          ShowMessage('Erro ao salvar alterações: ' + E.Message);
+          DataModule1.tbfornecedor.Cancel; // Cancela as alterações caso ocorra erro
+        end;
   end;
 end;
 
@@ -285,17 +283,17 @@ procedure Tfornecedor.SpeedButton6Click(Sender: TObject);
 begin
   if not DataModule1.tbfornecedor.IsEmpty then // Verifica se tem alguém selecionado
   // pergunta ao usuário se ele deseja excluir o registro
-  if MessageDlg('Tem certeza que deseja excluir esse fornecedor?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
-  begin    
-    try
-      DataModule1.tbfornecedor.Delete; // Remove o registro atual
-      ShowMessage('Registro excluído com sucesso!');
-    except
-      on E: Exception do
-        ShowMessage('Nenhum registro está selecionado!');
+    if MessageDlg('Tem certeza que deseja excluir esse fornecedor?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+      begin
+        try
+          DataModule1.tbfornecedor.Delete; // Remove o registro atual
+          ShowMessage('Registro excluído com sucesso!');
+        except
+          on E: Exception do
+          ShowMessage('Nenhum registro está selecionado!');
 
+      end;
     end;
-  end;
 end;
 
 procedure Tfornecedor.SpeedButton8Click(Sender: TObject);

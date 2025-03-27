@@ -379,8 +379,6 @@ object produtos: Tprodutos
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 7
-        ExplicitLeft = 6
-        ExplicitTop = 455
         object Panel5: TPanel
           AlignWithMargins = True
           Left = 107

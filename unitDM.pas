@@ -69,25 +69,38 @@ type
     tbfuncionariosnome: TStringField;
     tbfuncionariosfuncao: TStringField;
     tbfuncionarioscpf: TStringField;
-    tbrequisicao: TFDTable;
-    tbrequisicaoidreq: TFDAutoIncField;
-    tbrequisicaonumeroreq: TStringField;
-    tbrequisicaodatareq: TDateField;
-    tbrequisicaodataconclusao: TDateField;
-    tbrequisicaoformapgto: TStringField;
-    tbrequisicaolicitacao: TStringField;
-    tbrequisicaodescricao: TStringField;
-    tbrequisicaoobservacao: TMemoField;
-    tbrequisicaoformareq: TStringField;
-    tbrequisicaosituacao: TStringField;
-    tbrequisicaoidAlmoxarifado: TIntegerField;
-    tbrequisicaoidCentrodeconsumo: TIntegerField;
     DSrequisicao: TDataSource;
     tbcentroconsumo: TFDTable;
     tbcentroconsumoid: TFDAutoIncField;
     tbcentroconsumonome: TStringField;
     tbcentroconsumoidResponsavel: TIntegerField;
     DScentroconsumo: TDataSource;
+    tbrequisicao: TFDTable;
+    tbrequisicaoidrequisicao: TFDAutoIncField;
+    tbrequisicaonumreq: TStringField;
+    tbrequisicaodatareq: TDateField;
+    tbrequisicaodataconc: TDateField;
+    tbrequisicaoformapagto: TStringField;
+    tbrequisicaosituacao: TStringField;
+    tbrequisicaolicitacao: TStringField;
+    tbrequisicaoformarequisicao: TStringField;
+    tbrequisicaodescricao: TStringField;
+    tbrequisicaoobservacao: TMemoField;
+    tbrequisicaoidalmoxarifado: TIntegerField;
+    tbrequisicaoidcentrodeconsumo: TIntegerField;
+    tbrequisicaoidsolicitante: TIntegerField;
+    tbmovimentacoes: TFDTable;
+    tbmovimentacoesid: TFDAutoIncField;
+    tbmovimentacoesrequisicaoid: TIntegerField;
+    tbmovimentacoesprodutoid: TIntegerField;
+    tbmovimentacoesqtd: TIntegerField;
+    DSmovimentacoes: TDataSource;
+    tbmovimentacoesnomeproduto: TStringField;
+    tbrequisicaonomerequisitante: TStringField;
+    tbrequisicaocentroconsumo: TStringField;
+    tbrequisicaonomealmoxarife: TStringField;
+    DSsqlItemRequisicao: TDataSource;
+    sqlItensRequisicao: TFDQuery;
   private
     { Private declarations }
   public
@@ -100,6 +113,8 @@ var
 implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses reqCompra;
 
 {$R *.dfm}
 

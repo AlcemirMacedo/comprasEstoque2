@@ -28,8 +28,6 @@ object fornecedor: Tfornecedor
     Color = 2171668
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 8
-    ExplicitHeight = 649
     object Label17: TLabel
       Left = 667
       Top = 145
@@ -56,7 +54,6 @@ object fornecedor: Tfornecedor
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitTop = 574
       object Panel5: TPanel
         AlignWithMargins = True
         Left = 107
@@ -734,7 +731,6 @@ object fornecedor: Tfornecedor
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 1
-      ExplicitHeight = 571
       object Label21: TLabel
         Left = 416
         Top = 75
@@ -888,7 +884,6 @@ object fornecedor: Tfornecedor
       Align = alLeft
       BevelOuter = bvNone
       TabOrder = 2
-      ExplicitHeight = 571
       object Label2: TLabel
         Left = 20
         Top = 14

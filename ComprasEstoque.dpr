@@ -8,7 +8,10 @@ uses
   unitDM in 'unitDM.pas' {DataModule1: TDataModule},
   cadProdutos in 'cadProdutos.pas' {produtos},
   cadFuncionarios in 'cadFuncionarios.pas' {funcionarios},
-  reqCompra in 'reqCompra.pas' {cadreqcompra};
+  reqCompra in 'reqCompra.pas' {cadreqcompra},
+  modalProdutos in 'modalProdutos.pas' {produtosModal},
+  uRelatorioRequisicao in 'uRelatorioRequisicao.pas' {frmRelatorio},
+  RelatorioReq in 'RelatorioReq.pas' {Form2};
 
 {$R *.res}
 
@@ -22,5 +25,7 @@ begin
   Application.CreateForm(Tprodutos, produtos);
   Application.CreateForm(Tfuncionarios, funcionarios);
   Application.CreateForm(Tcadreqcompra, cadreqcompra);
+  Application.CreateForm(TprodutosModal, produtosModal);
+  Application.CreateForm(TForm2, Form2);
   Application.Run;
 end.
