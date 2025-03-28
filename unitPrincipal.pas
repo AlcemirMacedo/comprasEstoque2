@@ -48,14 +48,14 @@ type
     Image5: TImage;
     Label8: TLabel;
     SpeedButton2: TSpeedButton;
-    Panel12: TPanel;
-    Image6: TImage;
-    Label9: TLabel;
-    SpeedButton3: TSpeedButton;
     Panel13: TPanel;
     Image7: TImage;
     Label10: TLabel;
     SpeedButton4: TSpeedButton;
+    Panel12: TPanel;
+    Image6: TImage;
+    Label9: TLabel;
+    SpeedButton3: TSpeedButton;
     procedure FormShow(Sender: TObject);
     procedure Panel5Click(Sender: TObject);
     procedure menuFornecedorClick(Sender: TObject);

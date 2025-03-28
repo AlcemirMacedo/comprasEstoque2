@@ -101,6 +101,7 @@ type
     tbrequisicaonomealmoxarife: TStringField;
     DSsqlItemRequisicao: TDataSource;
     sqlItensRequisicao: TFDQuery;
+    tbrequisicaoentradasaida: TStringField;
   private
     { Private declarations }
   public

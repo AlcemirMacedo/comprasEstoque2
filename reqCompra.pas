@@ -15,8 +15,6 @@ type
     Panel7: TPanel;
     Panel13: TPanel;
     Panel4: TPanel;
-    Label1: TLabel;
-    reqcompra: TLabel;
     Panel5: TPanel;
     Label6: TLabel;
     Label7: TLabel;
@@ -38,7 +36,6 @@ type
     Label11: TLabel;
     DBLookupComboBox3: TDBLookupComboBox;
     DBLookupComboBox4: TDBLookupComboBox;
-    DBEdit4: TDBEdit;
     Label3: TLabel;
     DBComboBox3: TDBComboBox;
     Label2: TLabel;
@@ -71,7 +68,6 @@ type
     SpeedButton3: TSpeedButton;
     SpeedButton5: TSpeedButton;
     Label21: TLabel;
-    Edit2: TEdit;
     DBLookupComboBox2: TDBLookupComboBox;
     Panel17: TPanel;
     DBEdit1: TDBEdit;
@@ -85,6 +81,12 @@ type
     Label13: TLabel;
     Shape1: TShape;
     Button2: TButton;
+    DBEdit4: TDBEdit;
+    reqcompra: TLabel;
+    Label1: TLabel;
+    Edit2: TEdit;
+    Label22: TLabel;
+    DBComboBox2: TDBComboBox;
     procedure SpeedButton5Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure SpeedButton4Click(Sender: TObject);
@@ -94,6 +96,9 @@ type
     procedure SpeedButton8Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);
+    procedure DBComboBox3Change(Sender: TObject);
+    procedure DBGrid3DrawColumnCell(Sender: TObject; const Rect: TRect;
+      DataCol: Integer; Column: TColumn; State: TGridDrawState);
   private
     { Private declarations }
   public
@@ -134,10 +139,41 @@ begin
     sql.Clear;
     sql.Add(qry);
     open;
+
+    if (RowsAffected > 0) then
+    begin
+      while not (Eof) do
+      Begin
+        frmRelatorio.RLMemo1.Lines.Add(FieldByName('nome').AsString);
+        frmRelatorio.RLMemo1.Lines.Add('--------------------------');
+        frmRelatorio.RLMemo2.Lines.Add(FieldByName('preco').AsString);
+        frmRelatorio.RLMemo2.Lines.Add('--------------------------');
+        Next;
+      End;
+
+      frmRelatorio.RLReport1.Preview();
+      DataModule1.tbrequisicao.Filter := '';
+      DataModule1.tbrequisicao.Filtered := False;
+
+    end
+    else
+    begin
+      Abort;
+    end;
+  
+
+    
   end;
-  frmRelatorio.RLReport1.Preview();
-  DataModule1.tbrequisicao.Filter := '';
-  DataModule1.tbrequisicao.Filtered := False;
+
+end;
+
+procedure Tcadreqcompra.DBComboBox3Change(Sender: TObject);
+begin
+if (DBComboBox3.Text = 'Deferido') or (DBComboBox3.Text = 'Indeferido') then
+begin
+  DBEdit4.Text := DateToStr(Now);
+end;
+
 end;
 
 procedure Tcadreqcompra.DBEdit1Change(Sender: TObject);
@@ -155,6 +191,26 @@ begin
     RadioButton6.Checked := True;
   end;
 
+end;
+
+procedure Tcadreqcompra.DBGrid3DrawColumnCell(Sender: TObject;
+  const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
+begin
+if(DataModule1.tbrequisicao.FieldByName('situacao').AsString = 'Deferido')then
+    begin
+      DBGrid3.Canvas.Font.Color:= $0044A729 ;
+      DBGrid3.DefaultDrawColumnCell(Rect, DataCol, Column, State);
+    end;
+  if(DataModule1.tbrequisicao.FieldByName('situacao').AsString = 'Indeferido')then
+    begin
+      DBGrid3.Canvas.Font.Color:= $004635DC;
+      DBGrid3.DefaultDrawColumnCell(Rect, DataCol, Column, State);
+    end;
+  if(DataModule1.tbrequisicao.FieldByName('situacao').AsString = 'Tramitando')then
+    begin
+      DBGrid3.Canvas.Font.Color:= $0007C1FE;
+      DBGrid3.DefaultDrawColumnCell(Rect, DataCol, Column, State);
+    end;
 end;
 
 procedure Tcadreqcompra.DBNavigator1Click(Sender: TObject;
@@ -204,10 +260,11 @@ begin
         DataModule1.tbrequisicao.FieldByName('formarequisicao').AsString := 'Outros';
       end;
 
-    DataModule1.tbrequisicao.Post;
-
     DBGrid3.Enabled:= true;
+    DataModule1.tbrequisicao.Post;
   end;
+
+
 
 
 end;
@@ -226,7 +283,6 @@ Edit2.Text := DateToStr(Now);
 DataModule1.tbrequisicao.FieldByName('datareq').AsDateTime := StrToDate(Edit2.Text);
 RadioButton4.Checked := True;
 DBGrid3.Enabled:= false;
-DBEdit4.SetFocus;
 end;
 
 procedure Tcadreqcompra.SpeedButton6Click(Sender: TObject);

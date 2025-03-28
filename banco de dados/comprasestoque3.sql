@@ -354,7 +354,7 @@ CREATE TABLE IF NOT EXISTS `centrodeconsumo` (
   KEY `fk_responsavel` (`idresponsavel`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Copiando dados para a tabela comprasestoque.centrodeconsumo: 0 rows
+-- Copiando dados para a tabela comprasestoque.centrodeconsumo: 3 rows
 /*!40000 ALTER TABLE `centrodeconsumo` DISABLE KEYS */;
 INSERT INTO `centrodeconsumo` (`id`, `nome`, `idresponsavel`) VALUES
 	(1, 'FUNDO MUNICIPAL DE SAÚDE', 3),
@@ -6038,7 +6038,7 @@ CREATE TABLE IF NOT EXISTS `fornecedor` (
 -- Copiando dados para a tabela comprasestoque.fornecedor: 1 rows
 /*!40000 ALTER TABLE `fornecedor` DISABLE KEYS */;
 INSERT INTO `fornecedor` (`idfornecedor`, `nomefantasia`, `razaosocial`, `cnpjcpf`, `inscestadual`, `inscmunicipal`, `endereco`, `bairro`, `cidade`, `uf`, `cep`, `nomecontato`, `telcontato`, `email`, `site`, `fk_cod_banco`, `agencia`, `numconta`) VALUES
-	(7, 'Alcemir Macedo de Souza', 'AMS Digital', '669.528.592-68', '653215484', '3216546161', 'Rua Coronel Guerreiro Antony', 'Cidade Nova', 'Manus', 'AM', '69094-340', 'Alcemir', '(92) 98556-5323', 'alcemirmacedo@gmail.com', 'http://www.alcemirmacedo.com.br', 3, '5487-6', '6548463416');
+	(7, 'Alcemir Macedo de Souza Editado', 'AMS Digital', '669.528.592-68', '653215484', '3216546161', 'Rua Coronel Guerreiro Antony', 'Cidade Nova', 'Manus', 'AM', '69094-340', 'Alcemir', '(92) 98556-5323', 'alcemirmacedo@gmail.com', 'http://www.alcemirmacedo.com.br', 3, '5487-6', '6548463416');
 /*!40000 ALTER TABLE `fornecedor` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela comprasestoque.funcionarios
@@ -6076,14 +6076,25 @@ CREATE TABLE IF NOT EXISTS `movimentacoes` (
   PRIMARY KEY (`id`),
   KEY `fk_requisicao` (`requisicaoid`),
   KEY `fk_produto` (`produtoid`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Copiando dados para a tabela comprasestoque.movimentacoes: 1 rows
+-- Copiando dados para a tabela comprasestoque.movimentacoes: 13 rows
 /*!40000 ALTER TABLE `movimentacoes` DISABLE KEYS */;
 INSERT INTO `movimentacoes` (`id`, `requisicaoid`, `produtoid`, `qtd`) VALUES
-	(1, NULL, 2, 20),
+	(1, 1, 2, 20),
 	(2, 1, 1, 30),
-	(3, 1, 1, 20);
+	(3, 1, 1, 20),
+	(5, 11, 1, 50),
+	(6, 5, 3, 20),
+	(8, 13, 1, 50),
+	(9, 7, 3, 20),
+	(10, 7, 5, 60),
+	(11, 7, 4, 60),
+	(12, 7, 6, 20),
+	(13, 7, 4, 60),
+	(14, 8, 5, 10),
+	(15, 8, 3, NULL),
+	(17, 7, 4, 20);
 /*!40000 ALTER TABLE `movimentacoes` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela comprasestoque.produto
@@ -6100,13 +6111,17 @@ CREATE TABLE IF NOT EXISTS `produto` (
   PRIMARY KEY (`idproduto`),
   KEY `fk_categoria` (`idcategoria_fk`),
   KEY `fk_unidade` (`idunidadefk`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Copiando dados para a tabela comprasestoque.produto: 2 rows
+-- Copiando dados para a tabela comprasestoque.produto: 5 rows
 /*!40000 ALTER TABLE `produto` DISABLE KEYS */;
 INSERT INTO `produto` (`idproduto`, `nome`, `descricao`, `preco`, `qtd_estoque`, `idcategoria_fk`, `tipo`, `data_cadastro`, `idunidadefk`) VALUES
 	(1, 'Leite em pó Duleite', 'Leite em pó desnatado com pacotes de 250g', 250.00, 50, 18, 'Materialo de Consumo', '2025-03-21 08:59:45', 55),
-	(2, 'Óleo Sinhá', 'Óleo de cozinha 500ml', 600.00, 50, 18, 'Materialo de Consumo', '2025-03-21 09:01:50', 72);
+	(4, 'Feijão preto', 'Feijão de 1k fardo de 30', 838.00, 50, 2, 'Materialo de Consumo', '2025-03-25 16:58:55', 52),
+	(3, 'Cartela com Ovos de páscoa', 'Vou por a descrição aqui', 600.00, 50, 5, 'Materialo de Consumo', '2025-03-25 16:38:46', 62),
+	(5, 'Macarrão 500g', 'Macarrão da marca manauara 500g', 600.00, 50, 1, 'Materialo de Consumo', '2025-03-27 08:17:49', 55),
+	(6, 'Papel Higiênico', 'Papel Higiênico com 8 unidades', 700.00, 50, 12, 'Materialo de Consumo', '2025-03-27 10:33:42', 55),
+	(7, 'Arroz ', 'Arroz cutia com 30kg', 300.00, 10, 1, 'Materialo de Consumo', '2025-03-28 16:05:59', 52);
 /*!40000 ALTER TABLE `produto` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela comprasestoque.requisicao
@@ -6124,17 +6139,24 @@ CREATE TABLE IF NOT EXISTS `requisicao` (
   `idalmoxarifado` int DEFAULT NULL,
   `idcentrodeconsumo` int DEFAULT NULL,
   `idsolicitante` int DEFAULT NULL,
+  `entradasaida` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idrequisicao`),
   KEY `fk_almoxarifado` (`idalmoxarifado`),
   KEY `fk_centroconsumo` (`idcentrodeconsumo`),
   KEY `fk_solicitante` (`idsolicitante`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Copiando dados para a tabela comprasestoque.requisicao: 2 rows
+-- Copiando dados para a tabela comprasestoque.requisicao: 6 rows
 /*!40000 ALTER TABLE `requisicao` DISABLE KEYS */;
-INSERT INTO `requisicao` (`idrequisicao`, `numreq`, `datareq`, `dataconc`, `formapagto`, `situacao`, `licitacao`, `formarequisicao`, `descricao`, `observacao`, `idalmoxarifado`, `idcentrodeconsumo`, `idsolicitante`) VALUES
-	(1, NULL, '2025-03-26', '2025-03-27', 'Pix', 'Indeferido', '657343445465', NULL, 'Alguma descrição dessa requisição', 'Observações para esta requisição', 3, 2, NULL),
-	(3, NULL, '2025-05-28', '2025-05-29', 'Boleto', 'Indeferido', '564374', NULL, 'Descrição desssa requisição', 'Observe esta requisição', 2, 2, NULL);
+INSERT INTO `requisicao` (`idrequisicao`, `numreq`, `datareq`, `dataconc`, `formapagto`, `situacao`, `licitacao`, `formarequisicao`, `descricao`, `observacao`, `idalmoxarifado`, `idcentrodeconsumo`, `idsolicitante`, `entradasaida`) VALUES
+	(10, '12032025', '2025-03-25', '0000-00-00', 'Pix', 'Tramitando', '6516460', 'Concorrência', 'Descrevo a Requisição', 'Observo a requisição Editado Novamente', 2, 2, 13, NULL),
+	(9, '9032025', '2025-03-25', '0000-00-00', 'Depósito', 'Deferido', '6546464', 'Concorrência', NULL, NULL, 5, 1, 4, NULL),
+	(14, '11032025', '2025-03-26', '0000-00-00', 'Boleto', 'Tramitando', '32165161', 'Concorrência', 'dsfg g df', 'dsfg dsfg dsgdsg', 6, 2, 15, NULL),
+	(15, '15032025', '2025-03-28', '2025-03-28', 'Débito', 'Tramitando', '3251651616', 'Concorrência', 'Dsc skladjflskfj', 'OBS SKDJFSAKLJFSLAÇKD', 5, 2, 5, NULL),
+	(7, '7032025', '2025-03-25', '0000-00-00', 'Débito', 'Indeferido', '3241654', 'Outros', 'Arrumando essa descrição', 'A observação tá funcionando', 1, 2, 1, NULL),
+	(8, '8032025', '2025-03-25', '0000-00-00', 'Débito', 'Tramitando', '262661', 'Convite', 'dsasafsafd', 'asdfsafsafsadf', 5, 1, 12, NULL),
+	(16, '16032025', '2025-03-28', NULL, 'Débito', 'Tramitando', '6546416494', 'Concorrência', 'sddsfgd gdfdsfg d', 'dfg dsfg ds gds gds', 4, 2, 5, 'Requisição de Compra'),
+	(17, '17032025', '2025-03-28', '2025-03-28', 'Débito', 'Indeferido', '756768', 'Concorrência', 'dgdfgd', 'dfgdgdsg', 6, 3, 3, 'Requisição de Compra');
 /*!40000 ALTER TABLE `requisicao` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela comprasestoque.unidademedida

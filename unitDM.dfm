@@ -160,6 +160,7 @@ object DataModule1: TDataModule1
       AutoGenerateValue = arDefault
       FieldName = 'preco'
       Origin = 'preco'
+      currency = True
       Precision = 10
       Size = 2
     end
@@ -513,6 +514,12 @@ object DataModule1: TDataModule1
       KeyFields = 'idalmoxarifado'
       Size = 120
       Lookup = True
+    end
+    object tbrequisicaoentradasaida: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'entradasaida'
+      Origin = 'entradasaida'
+      Size = 50
     end
   end
   object tbmovimentacoes: TFDTable

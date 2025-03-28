@@ -10,12 +10,14 @@ uses
 type
   TfrmRelatorio = class(TForm)
     RLReport1: TRLReport;
+    RLBand2: TRLBand;
     RLBand1: TRLBand;
     RLLabel1: TRLLabel;
     RLLabel2: TRLLabel;
     RLDBText1: TRLDBText;
-    RLBand2: TRLBand;
-    RLLabel3: TRLLabel;
+    RLMemo1: TRLMemo;
+    RLMemo2: TRLMemo;
+    RLMemo3: TRLMemo;
   private
     { Private declarations }
   public

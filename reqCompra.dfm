@@ -41,19 +41,31 @@ object cadreqcompra: Tcadreqcompra
       BevelOuter = bvNone
       TabOrder = 2
       object Label12: TLabel
-        Left = 405
-        Top = 19
-        Width = 131
-        Height = 19
+        Left = 649
+        Top = 0
+        Width = 89
+        Height = 14
         Caption = 'Requisi'#231#227'o Hidden'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
         Visible = False
       end
       object Label13: TLabel
-        Left = 547
-        Top = 19
-        Width = 18
-        Height = 19
+        Left = 744
+        Top = 0
+        Width = 12
+        Height = 14
         Caption = '00'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
         Visible = False
       end
       object Shape1: TShape
@@ -67,6 +79,20 @@ object cadreqcompra: Tcadreqcompra
         Pen.Style = psDot
         ExplicitLeft = 839
       end
+      object reqcompra: TLabel
+        Left = 574
+        Top = 22
+        Width = 137
+        Height = 19
+        Caption = 'Data da Conclus'#227'o'
+      end
+      object Label1: TLabel
+        Left = 405
+        Top = 22
+        Width = 137
+        Height = 19
+        Caption = 'Data da Requisi'#231#227'o'
+      end
       object Panel4: TPanel
         Left = 19
         Top = -19
@@ -74,55 +100,36 @@ object cadreqcompra: Tcadreqcompra
         Height = 105
         BevelOuter = bvNone
         TabOrder = 2
-        object Label1: TLabel
+        object Label22: TLabel
           Left = 16
-          Top = 38
-          Width = 137
+          Top = 41
+          Width = 132
           Height = 19
-          Caption = 'Data da Requisi'#231#227'o'
+          Caption = 'Tipo de Requisi'#231#227'o'
         end
-        object reqcompra: TLabel
-          Left = 176
-          Top = 38
-          Width = 137
-          Height = 19
-          Caption = 'Data da Conclus'#227'o'
-        end
-        object DBEdit4: TDBEdit
-          Left = 176
-          Top = 63
-          Width = 144
+        object DBComboBox2: TDBComboBox
+          Left = 16
+          Top = 66
+          Width = 208
           Height = 27
-          DataField = 'dataconc'
+          DataField = 'entradasaida'
           DataSource = DataModule1.DSrequisicao
           Font.Charset = ANSI_CHARSET
           Font.Color = clBlack
           Font.Height = -16
           Font.Name = 'Futura Bk BT'
           Font.Style = []
-          MaxLength = 10
+          Items.Strings = (
+            'Requisi'#231#227'o de Compra'
+            'Requisi'#231#227'o de Sa'#237'da')
           ParentFont = False
           TabOrder = 0
-        end
-        object Edit2: TEdit
-          Left = 16
-          Top = 63
-          Width = 144
-          Height = 27
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Futura Bk BT'
-          Font.Style = []
-          ParentFont = False
-          ReadOnly = True
-          TabOrder = 1
         end
       end
       object Panel5: TPanel
         Left = 19
         Top = 92
-        Width = 363
+        Width = 347
         Height = 71
         BevelOuter = bvNone
         TabOrder = 3
@@ -158,7 +165,7 @@ object cadreqcompra: Tcadreqcompra
           AlignWithMargins = True
           Left = 3
           Top = 3
-          Width = 357
+          Width = 341
           Height = 1
           Align = alTop
           Brush.Color = -1
@@ -186,8 +193,8 @@ object cadreqcompra: Tcadreqcompra
           TabOrder = 0
         end
         object DBEdit1: TDBEdit
-          Left = 206
-          Top = 10
+          Left = 200
+          Top = 8
           Width = 141
           Height = 27
           DataField = 'formarequisicao'
@@ -206,7 +213,7 @@ object cadreqcompra: Tcadreqcompra
       object Panel6: TPanel
         Left = 35
         Top = 358
-        Width = 347
+        Width = 333
         Height = 136
         BevelOuter = bvNone
         TabOrder = 1
@@ -221,7 +228,7 @@ object cadreqcompra: Tcadreqcompra
           AlignWithMargins = True
           Left = 3
           Top = 3
-          Width = 341
+          Width = 327
           Height = 1
           Align = alTop
           Brush.Color = -1
@@ -297,7 +304,7 @@ object cadreqcompra: Tcadreqcompra
       object Panel15: TPanel
         Left = 19
         Top = 169
-        Width = 363
+        Width = 349
         Height = 183
         BevelOuter = bvNone
         TabOrder = 0
@@ -312,7 +319,7 @@ object cadreqcompra: Tcadreqcompra
           AlignWithMargins = True
           Left = 3
           Top = 3
-          Width = 357
+          Width = 343
           Height = 1
           Align = alTop
           Brush.Color = -1
@@ -401,6 +408,7 @@ object cadreqcompra: Tcadreqcompra
             'Tramitando')
           ParentFont = False
           TabOrder = 0
+          OnChange = DBComboBox3Change
         end
         object DBLookupComboBox2: TDBLookupComboBox
           Left = 16
@@ -424,7 +432,7 @@ object cadreqcompra: Tcadreqcompra
       object Panel3: TPanel
         Left = 401
         Top = 501
-        Width = 407
+        Width = 406
         Height = 80
         Margins.Left = 0
         Margins.Right = 20
@@ -1078,9 +1086,9 @@ object cadreqcompra: Tcadreqcompra
       end
       object DBGrid3: TDBGrid
         Left = 405
-        Top = 44
+        Top = 95
         Width = 398
-        Height = 450
+        Height = 399
         BorderStyle = bsNone
         DataSource = DataModule1.DSrequisicao
         Font.Charset = ANSI_CHARSET
@@ -1097,6 +1105,7 @@ object cadreqcompra: Tcadreqcompra
         TitleFont.Height = -16
         TitleFont.Name = 'Futura Bk BT'
         TitleFont.Style = []
+        OnDrawColumnCell = DBGrid3DrawColumnCell
         Columns = <
           item
             Expanded = False
@@ -1174,7 +1183,7 @@ object cadreqcompra: Tcadreqcompra
       object Panel2: TPanel
         Left = 37
         Top = 493
-        Width = 331
+        Width = 327
         Height = 88
         BevelOuter = bvNone
         TabOrder = 6
@@ -1188,7 +1197,7 @@ object cadreqcompra: Tcadreqcompra
         object DBMemo2: TDBMemo
           Left = 0
           Top = 24
-          Width = 331
+          Width = 327
           Height = 64
           Align = alBottom
           DataField = 'observacao'
@@ -1201,6 +1210,37 @@ object cadreqcompra: Tcadreqcompra
           ParentFont = False
           TabOrder = 0
         end
+      end
+      object DBEdit4: TDBEdit
+        Left = 574
+        Top = 47
+        Width = 154
+        Height = 27
+        DataField = 'dataconc'
+        DataSource = DataModule1.DSrequisicao
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        MaxLength = 10
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 7
+      end
+      object Edit2: TEdit
+        Left = 405
+        Top = 47
+        Width = 152
+        Height = 27
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Futura Bk BT'
+        Font.Style = []
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 8
       end
     end
     object Panel7: TPanel

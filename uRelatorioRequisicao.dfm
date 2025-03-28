@@ -3,7 +3,7 @@ object frmRelatorio: TfrmRelatorio
   Top = 0
   Caption = 'frmRelatorio'
   ClientHeight = 881
-  ClientWidth = 800
+  ClientWidth = 804
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,14 +24,15 @@ object frmRelatorio: TfrmRelatorio
     Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = []
-    object RLBand1: TRLBand
+    object RLBand2: TRLBand
       Left = 38
-      Top = 86
+      Top = 38
       Width = 718
-      Height = 67
+      Height = 59
+      BandType = btHeader
       object RLLabel1: TRLLabel
         Left = 3
-        Top = 17
+        Top = 20
         Width = 293
         Height = 22
         Caption = 'SOLICITA'#199#195'O DE REQUISI'#199#195'O'
@@ -58,7 +59,7 @@ object frmRelatorio: TfrmRelatorio
       object RLDBText1: TRLDBText
         Left = 604
         Top = 17
-        Width = 98
+        Width = 84
         Height = 25
         DataField = 'numreq'
         DataSource = DataModule1.DSrequisicao
@@ -71,18 +72,32 @@ object frmRelatorio: TfrmRelatorio
         Text = ''
       end
     end
-    object RLBand2: TRLBand
+    object RLBand1: TRLBand
       Left = 38
-      Top = 38
+      Top = 97
       Width = 718
-      Height = 48
-      BandType = btColumnHeader
-      object RLLabel3: TRLLabel
-        Left = 0
-        Top = 16
-        Width = 38
-        Height = 16
-        Caption = 'Nome'
+      Height = 224
+      AutoExpand = False
+      object RLMemo1: TRLMemo
+        Left = 17
+        Top = 19
+        Width = 248
+        Height = 181
+        Behavior = [beSiteExpander]
+      end
+      object RLMemo2: TRLMemo
+        Left = 544
+        Top = 19
+        Width = 144
+        Height = 182
+        Behavior = [beSiteExpander]
+      end
+      object RLMemo3: TRLMemo
+        Left = 368
+        Top = 19
+        Width = 144
+        Height = 182
+        Behavior = [beSiteExpander]
       end
     end
   end
